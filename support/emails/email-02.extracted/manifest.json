@@ -1,0 +1,67 @@
+{
+  "source_eml": "support/emails/email-02.eml",
+  "output_dir": "support/emails/email-02.extracted",
+  "headers_file": "support/emails/email-02.extracted/headers.txt",
+  "parts": [
+    {
+      "index": 1,
+      "content_type": "text/plain",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 1827,
+      "sha256": "36a72ca8e9e1c491177c8f7470028ed646404673b028319ded8c69219ede4165",
+      "path": "support/emails/email-02.extracted/parts/001_part_part-001.txt"
+    },
+    {
+      "index": 2,
+      "content_type": "text/html",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 8645,
+      "sha256": "e7b1c9b4492d62186f1664a632ef811e83c3edbfac5358a4d7cc96e293ef27c9",
+      "path": "support/emails/email-02.extracted/parts/002_part_part-002.html"
+    },
+    {
+      "index": 3,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "4ec10a3e-08d9-4b66-badd-1d754b413dc0",
+      "size_bytes": 2002191,
+      "sha256": "b534849d44236ac813bfbc705ecce2fc6323b1747819ce64d7306c8923051c06",
+      "path": "support/emails/email-02.extracted/parts/003_inline_4ec10a3e-08d9-4b66-badd-_image.png"
+    },
+    {
+      "index": 4,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "Outlook-l1nqlstb.png",
+      "content_id": "6723c19d-fbd7-420e-8909-14d208b1db74",
+      "size_bytes": 51618,
+      "sha256": "7c31833afb0cd2a2a42ee9e9710a082b18fcc221103c3fd01a7365673f8f5a0c",
+      "path": "support/emails/email-02.extracted/parts/004_inline_6723c19d-fbd7-420e-8909-_Outlook-l1nqlstb.png"
+    },
+    {
+      "index": 5,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "Outlook-ojgvtvyd.png",
+      "content_id": "bc00bcf3-6a40-4733-8b73-de96692f67df",
+      "size_bytes": 9784,
+      "sha256": "1e4ceaad9c678889b916277b2c57026d9c8e13d9c8aeaca6c6ab883a7ea05ff2",
+      "path": "support/emails/email-02.extracted/parts/005_inline_bc00bcf3-6a40-4733-8b73-_Outlook-ojgvtvyd.png"
+    },
+    {
+      "index": 6,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "115a8f91-b606-4087-a173-cb1dc1d61204",
+      "size_bytes": 95195,
+      "sha256": "5c23d4cfaf8b3944430eaf27208a5a360c942c6fe64fa11f45002098619341de",
+      "path": "support/emails/email-02.extracted/parts/006_inline_115a8f91-b606-4087-a173-_image.png"
+    }
+  ]
+}

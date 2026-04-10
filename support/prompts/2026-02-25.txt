@@ -1,0 +1,84 @@
+I need you to write me a prompt for another Codex chat to start working on a project.  The "end-in-mind" for the project is to convert the R code contained in this folder and working directory to Python, and have it perform the same functions.  Ultimately it would be an automated process without a human needing to execute the code and have the PI Asset Framework database updated.  Our organization uses AWS a lot, so that would be a likely avenue for automating.  However, in order to get started on the project, I need simple steps to use a building blocks to convert this R code and associated functions to Python.  It should start with simple implementations that I can run locally on my computer and continue to build up from there.  What I have contained in this project workspace so far are the following:
+- Emails from the business stakeholder that wrote the R code and maintains everything currently.  I had you convert these emails to a Codex readable format and you said starting points for the next Codex chat would be the files under C:\repository\local\ini-analysis\support\emails\_context_bundle.
+- The R code I was provided in one of the emails.  This R code is available under C:\repository\local\ini-analysis\support\R.
+- A package structure file and example outputs from some of the R functions available here C:\repository\local\ini-analysis\support\package_structure.html, C:\repository\local\ini-analysis\support\pi_af_import.csv, C:\repository\local\ini-analysis\support\pi_af_loader.csv, and C:\repository\local\ini-analysis\support\pi_tag_master_list.csv.
+- The other files in the project outside of C:\repository\local\ini-analysis\support are my own files I've been working with that *do not* need to be included in the prompt for Codex.
+I performed an initial review of the R code and it looks like there are some gaps on code I need to replicate everything that the business stakeholder is using it to accomplish.  The first things that come to my mind are: 1) I do not see the actual calls to Pi Web API are; and 2) I do not see what the actual calls to the GIS API are.  
+I need you to build a complete prompt for another Codex chat to get started on this project.  The prompt should direct Codex to review the project files I referenced to you here to get a complete understanding of the information we currently have.  We need to identify what the gaps in information are and the prompt should instruct Codex to build a list of information that we still need so I can request that from the business stakeholder.  The prompt should also direct Codex to build a step-by-step plan to get all of this working in Python.
+
+---
+Output meta prompt:
+Use this as the starter prompt in your next Codex chat:
+
+```text
+You are helping me start a migration project.
+
+Project end goal:
+Convert the existing R-based workflow in this repository to Python with equivalent functionality, then evolve it into an automated process that updates PI Asset Framework without manual execution. AWS is the likely automation platform later, but start with local runnable building blocks first.
+
+Important scope:
+Only use files under:
+- C:\repository\local\ini-analysis\support\emails\_context_bundle
+- C:\repository\local\ini-analysis\support\R
+- C:\repository\local\ini-analysis\support\package_structure.html
+- C:\repository\local\ini-analysis\support\pi_af_import.csv
+- C:\repository\local\ini-analysis\support\pi_af_loader.csv
+- C:\repository\local\ini-analysis\support\pi_tag_master_list.csv
+
+Do not include or rely on files outside:
+- C:\repository\local\ini-analysis\support
+
+What I need from you now:
+1. Read and synthesize all available context from the email bundle and R code.
+2. Reconstruct the intended current-state workflow (business flow + data flow + technical flow).
+3. Identify missing information needed to fully replicate behavior in Python.
+4. Produce a stakeholder-ready request list of missing information (clear, prioritized questions).
+5. Produce a step-by-step migration plan that starts with simple local implementations and builds toward full automation.
+
+Known likely gaps to validate:
+- I do not clearly see the actual PI Web API calls.
+- I do not clearly see the actual GIS API calls.
+
+Required outputs:
+1. Current-State Summary
+- What the existing R process appears to do end-to-end.
+- Which inputs/outputs are used and where.
+- Which email artifacts confirm each behavior.
+
+2. R Inventory and Mapping
+- Inventory of R files/functions and their purpose.
+- Mapping table: R function -> proposed Python module/function -> status (clear/unclear/missing details).
+
+3. Gap Analysis
+- Explicit list of unknowns/ambiguities preventing full migration.
+- For each gap: impact, why it matters, and what evidence is missing.
+
+4. Stakeholder Question List
+- Prioritized list I can send to the business stakeholder.
+- Questions grouped by topic (PI, GIS, business rules, runtime/ops, credentials/access, validation).
+
+5. Python Migration Roadmap
+- Phased plan with milestones:
+  - Phase 0: local project setup and reproducible environment.
+  - Phase 1: core data models + file-based pipeline parity.
+  - Phase 2: PI and GIS integration adapters (with mocks first, then real APIs).
+  - Phase 3: validation against known outputs (CSV artifacts).
+  - Phase 4: automation architecture options for AWS.
+- For each phase: concrete tasks, dependencies, acceptance criteria, and local test strategy.
+
+6. First Local Building Blocks
+- Recommend the first small Python implementation slice I can run locally this week.
+- Include exact run/test steps and expected outputs.
+- Keep this practical and incremental.
+
+7. Automation Direction (high-level for now)
+- Propose AWS target patterns (for example scheduler + compute + secrets + monitoring), with pros/cons.
+- Do not over-design; keep this as an initial direction after local parity is achieved.
+
+Output format:
+- Start with a concise executive summary.
+- Then provide sections exactly matching the 7 required outputs above.
+- Be explicit about assumptions vs confirmed facts.
+- Where possible, cite file paths used as evidence.
+- If something is unknown, do not guess silently; call it out and add it to the stakeholder questions.
+```

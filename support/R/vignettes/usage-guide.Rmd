@@ -1,0 +1,173 @@
+---
+title: "Usage Guide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Usage Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+## Overview
+
+afbuildr provides a three-step pipeline for building, validating, and
+formatting PI tags for wastewater lift stations:
+
+| Step | Function | Input | Output |
+|------|----------|-------|--------|
+| 1 | `validate_gis()` | GIS data + PI Web API | `data/pi_tag_master_list.csv` |
+| 2 | `build_af()` | master list + SCADA history | `data/pi_af_import.csv` |
+| 3 | `export_af()` | AF import data | `xlsx/pi_af_loader.csv` |
+
+Each step must complete before the next can run. The final output is a CSV
+file formatted for the PI Asset Framework bulk import tool.
+
+## Running the Pipeline
+
+### Step 1: Build the PI Tag Master List
+
+```{r}
+library(afbuildr)
+validate_gis()
+```
+
+This will:
+
+1. Load lift station records from GIS (in-service stations with a CMMS asset
+   ID)
+2. Classify each station's PI tag as valid, missing, malformed, or
+   unrecognized
+3. Print a tree-formatted summary showing how many tags fall into each
+   category
+4. Attempt to guess correct tag names for missing or invalid tags by trying
+   address-based candidates against the PI Web API
+5. Export the results to `data/pi_tag_master_list.csv`
+6. Print warnings for any duplicate CMMS asset IDs or PI tags
+
+**Expected runtime:** Several minutes, depending on the number of tags that
+need PI Web API validation. Progress messages are printed every 50 tags
+(classification) and every 10 assets (guessing).
+
+**What to check:** Review the tree summary output. A high percentage of
+"Bad Tag" or "Missing Data (NA)" entries may indicate a GIS data quality
+issue or PI Web API connectivity problem.
+
+### Step 2: Check Pump Tags and Build AF Import Data
+
+```{r}
+build_af()
+```
+
+This will:
+
+1. Read `data/pi_tag_master_list.csv` and filter to `WWL:` tags
+2. Validate all pump tag combinations (4 pumps x 4 types = 16 per station)
+3. Pull 7 days of SCADA history for the valid tags
+4. Identify stations with VFD control or more than 2 pumps
+5. Exclude stations with more than 2 pumps (these require manual handling)
+6. Check for lead setpoint (`_WLLEADSP`) tags to determine the AF template
+7. Join plant/basin assignments and pipe diameter reference data
+8. Export to `data/pi_af_import.csv` and open in the RStudio viewer
+
+**Expected runtime:** Longer than Step 1 due to the high number of pump tag
+validations (16 per station) and the SCADA history retrieval. Progress
+messages are printed every 100 tags.
+
+**What to check:** The viewer will display the final import table. Verify
+that the `BASIN`, `TEMPLATE`, and `Dia` columns look correct. Stations with
+`_cte_lead` template do not have a lead setpoint tag; stations with
+`_cte_leadsp` do.
+
+### Step 3: Format for the PI AF CSV Loader
+
+```{r}
+export_af()
+```
+
+This will:
+
+1. Read `data/pi_af_import.csv`
+2. Build the hierarchical CSV structure required by the PI AF bulk import
+   tool (6 rows per station)
+3. Export to `xlsx/pi_af_loader.csv`
+
+**Expected runtime:** Seconds (no API calls).
+
+**What to check:** Open `xlsx/pi_af_loader.csv` and verify the AF hierarchy
+looks correct before loading it into PI System Explorer.
+
+## Running Individual Functions
+
+You don't have to run the full pipeline. Individual functions can be called
+for targeted tasks:
+
+### Validate a specific set of tags
+
+```{r}
+# Build a data frame with the required columns
+my_stations <- data.frame(
+  STREET_NAME = c("MAIN", "OAK"),
+  STREET_NUMBER = c("100", "200"),
+  CMMS_ASSET_ID = c("LS001", "LS002"),
+  PI_TAG = c("wwl:north:mai100_", "wwl:east:oak200_")
+)
+
+# Classify and validate
+results <- classify_tags(my_stations)
+print_tag_summary(results)
+```
+
+### Check pump tags for specific stations
+
+```{r}
+tags <- check_all_pump_tags(my_stations)
+```
+
+### Verify PI Web API connectivity
+
+```{r}
+# Should return a web ID string; NULL means the tag was not found
+safe_get_webid("wwl:north:mai100_P1RUN")
+```
+
+## Output Files
+
+| File | Created by | Description |
+|------|-----------|-------------|
+| `data/pi_tag_master_list.csv` | `validate_gis()` | All lift stations with validated/guessed PI tags |
+| `data/pi_af_import.csv` | `build_af()` | Stations ready for AF import with basin, template, and diameter |
+| `xlsx/pi_af_loader.csv` | `export_af()` | Final hierarchical CSV for PI AF bulk import tool |
+
+## Troubleshooting
+
+### "Error in get_webid(...)" or all tags show as bad
+
+The PI Web API is unreachable or credentials are not configured. Verify your
+`piwebapi` package configuration and network access. See
+`vignette("technical-reference")` for setup details.
+
+### Step 2 takes extremely long
+
+Each station generates 16 pump tag candidates, each requiring a PI Web API
+call. For 200 stations, that's 3,200 API calls. This is expected. If it
+seems stuck, check the progress messages --- they update every 100 tags.
+
+### "Missing data/ls_by_plant.RData" or "Missing data/dia_by_ls.RData"
+
+These reference data files must be present before running Step 2. See
+`vignette("technical-reference")` for details on how to obtain or
+regenerate them.
+
+### Duplicate warnings after Step 1
+
+`validate_gis()` prints warnings for duplicate CMMS asset IDs and
+duplicate PI tags. A small number of duplicates may be expected (e.g.,
+stations with multiple GIS records). Large numbers suggest a data quality
+issue in GIS.

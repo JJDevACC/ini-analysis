@@ -1,0 +1,45 @@
+Received: from SA0PR09MB7355.namprd09.prod.outlook.com (::1) by PH0PR09MB10669.namprd09.prod.outlook.com with HTTPS; Fri, 20 Feb 2026 03:19:24 +0000
+Received: from MW4PR09MB8931.namprd09.prod.outlook.com (2603:10b6:303:1f6::22) by SA0PR09MB7355.namprd09.prod.outlook.com (2603:10b6:806:74::18) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9632.16; Fri, 20 Feb 2026 03:19:17 +0000
+Received: from MW4PR09MB8931.namprd09.prod.outlook.com ([fe80::90b3:5fac:164c:8f63]) by MW4PR09MB8931.namprd09.prod.outlook.com ([fe80::90b3:5fac:164c:8f63%4]) with mapi id 15.20.9632.015; Fri, 20 Feb 2026 03:19:16 +0000
+From: "Jones, Craig" <jonedc@jea.com>
+To: "Orr, Jim" <orrjd@jea.com>, "Bedoya, Juan" <bedojc@jea.com>, "Schoettler, Kyle C." <schokc@jea.com>
+CC: "Strickland, Matt J." <strimj@jea.com>, "Nettles, Casey D." <nettad@jea.com>, "Eaton, Michael T." <EatoMT@jea.com>
+Subject: Re: I&I Use-Case Scoping – PI Vision / PI Datalink
+Thread-Topic: I&I Use-Case Scoping – PI Vision / PI Datalink
+Thread-Index: AdyXewy+0KGTZEy2d0Ow0dmjgNk0dwEsX7lgAAGElmoBeEnUIA==
+X-MS-Exchange-MessageSentRepresentingType: 1
+Date: Fri, 20 Feb 2026 03:19:16 +0000
+Message-ID: <MW4PR09MB893174047D1B0808F2D6B150D268A@MW4PR09MB8931.namprd09.prod.outlook.com>
+References: <MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931D3E7ECB73407F2375B38D260A@MW4PR09MB8931.namprd09.prod.outlook.com> <PH0PR09MB10669994084E2FF0176FE4C47BA60A@PH0PR09MB10669.namprd09.prod.outlook.com>
+In-Reply-To: <PH0PR09MB10669994084E2FF0176FE4C47BA60A@PH0PR09MB10669.namprd09.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: MW4PR09MB8931.namprd09.prod.outlook.com
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id: c13df8c2-9b09-4216-49a6-08de702ed43d
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator: 
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels: 
+x-ms-publictraffictype: Email
+authentication-results: dkim=none (message not signed) header.d=none;dmarc=none action=none header.from=jea.com;
+x-ms-traffictypediagnostic: MW4PR09MB8931:EE_|SA0PR09MB7355:EE_|PH0PR09MB10669:EE_
+x-ms-exchange-crosstenant-originalarrivaltime: 20 Feb 2026 03:19:16.4604 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-id: c0d91960-576d-4631-bc37-56584b7dc8db
+x-ms-exchange-transport-crosstenantheadersstamped: SA0PR09MB7355
+x-ms-exchange-transport-endtoendlatency: 00:00:07.9116702
+x-ms-exchange-crosstenant-network-message-id: c13df8c2-9b09-4216-49a6-08de702ed43d
+x-ms-office365-filtering-correlation-id: c13df8c2-9b09-4216-49a6-08de702ed43d
+x-forefront-antispam-report: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:MW4PR09MB8931.namprd09.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(366016)(6049299003)(39142699007)(31052699007)(8096899003)(7142099003)(7053199007)(13003099007)(4013099003)(41050700001);DIR:INT;
+x-microsoft-antispam: BCL:0;ARA:13230040|366016|6049299003|39142699007|31052699007|8096899003|7142099003|7053199007|13003099007|4013099003|41050700001;
+x-ms-exchange-processed-by-bccfoldering: 15.20.9632.007
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-crosstenant-authsource: MW4PR09MB8931.namprd09.prod.outlook.com
+x-ms-exchange-atpmessageproperties: SL
+X-Microsoft-Antispam-Mailbox-Delivery: ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(425001)(930201)(20251009189)(140003);
+X-Microsoft-Antispam-Message-Info: rfukE0WA6kIlbX+p5kBfLngyJaYoCeXPyNBzttnF6+r6CwqdBTGsX5F7Zn+bB7xe3CndvytohJLeIwZiR1sL2PIsFz663Me3Q6AIdsSDqIldGuniFEnvqrPvA/c7W5eiSuwEIgb8XEaxbjocWQT2Wx/NbjKfO2BR9Wv9TGxpx3S4LGvTzvUiqBFIK2dWCSnr+ZsbfZOUaDe4AZcuhcd6JaFhE0W9qBpr7TDuajT4Qpcbcs9Rk5sNQcXaUg/csFO2/45uVa3KQN3xwSMGlv4Q0l5UU2OmoWU3ugTRpD5eV7nMR9bN6xyJeh56tt+Y1yLwk+hokN4l5zoaCsxTFeORx47PZ7QvZei0Y5HliZ5nme88h88xcO8rYSu4Aqx1V3Jbv0TUSUfiosAfIE6ISbRgmcpc68K3M8yLyLs9UXpdETJn/OSz0fUIZvejODoCjD12tRtl3nxFm4b33Gg3puTr7gqS6x5aW6Cyqf4x/qeNlng6HVWwBS7nyz0qaqEuJWRWjagsezgc+eqqnUXmjmlC9diuJUL/SdObniIyS8ffh25kw9RStq7qkMTm2s8EjNMlZWp/5+TJOz/aEmkZEBLQasAkIqalI7mDZJxiwUzvyRsExjp7QxivNLy6IR3NpQl70qnrLu4cCibJjoeUbCqkdf4vLnTma7X3mBJsqetleAV0GLGqXr28WUNIVf1Hu1xsln6RKvvebdviRbAWWbQzim0HrU8Ga3687WNLQpgc0ho7S+7ON8UY/4ZEU4WUVy7aUKUS+XuYks8gvDuLV7KKZIW/ZjduMBOX69lPjMhKdWA=
+Content-Type: multipart/mixed; boundary="_010_MW4PR09MB893174047D1B0808F2D6B150D268AMW4PR09MB8931namp_"
+MIME-Version: 1.0

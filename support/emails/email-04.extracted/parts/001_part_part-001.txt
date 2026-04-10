@@ -1,0 +1,142 @@
+Thanks for meeting with us yesterday.
+
+Attached is the README in Markdown for the PI Asset Framework tag loader script.
+
+________________________________
+
+Step 1: Build PI Tags from GIS
+
+1.1) Get list of tags from GIS
+Downloads pump station features from GWPR, filters to in-service lift stations with a CMMS asset ID.
+
+get_ls_from_gis <- function() {
+    load_gis_ps() %>%
+    st_drop_geometry() %>%                  # remove x,y
+    filter(FAC_STATE == "INS") %>%          # In-Service Only
+    filter(!is.na(CMMS_ASSET_ID)) %>%       # Has CMMS_ASSET_ID
+    filter(SUBTYPE == 1) %>%                # is a Liftstation
+    dplyr::select(STREET_NAME, STREET_NUMBER, CMMS_ASSET_ID, PI_TAG)
+}
+
+1.2) Classify and validate tags
+classify_tags() splits tags into categories and checks each against the PI Web API. print_tag_summary() displays the results as a tree.
+
+                   levelName matches     pct
+1 GWPR/Sewer_Dataset/Station    1696
+2  |--Missing Data (NA)           17    (1%)
+3  |--Missing Underscore        1674
+4  |   |--Bad Tag                 20  (1.2%)
+5  |   ¢X--Valid Otherwise       1654 (97.5%)
+6  |--Correct Format               0
+7  |   |--Bad Tag                  0    (0%)
+8  |   ¢X--OK                       0    (0%)
+9  ¢X--No SCADA                     5  (0.3%)
+
+1.3) Try to guess correct tag names
+For tags that are missing or invalid, guess_tag_name() builds candidate tag names from the street name and address, then checks each against the PI Web API.
+
+Candidate format: {site}:{grid}:{first 3 chars of street}{address}_{measurement}.
+¡P         {site} = wwl, for liftstations
+¡P         {grid} = north, east, south, west, nassau, stjohns
+¡P         {first 3 chars of street}{address}, see guess.R
+¡P         {measurement} = used _P1RUN because it is common to all liftstations.
+
+Suffixes tried:
+¡P         "" (standard station)
+¡P         "B" (booster pump)
+¡P         "-1" (new station placeholder)
+
+Stops at the first valid match per asset to minimize API calls.
+
+1.4) Export
+The corrected tags are joined back with the original GIS data and exported to data/pi_tag_master_list.csv. Duplicate CMMS_ASSET_IDs and PI_TAGs are printed as warnings for manual review.
+
+________________________________
+Step 2: Check Pump Tags and Build AF Import Data
+
+2.1) Check all pump tags
+check_all_pump_tags() generates 16 tag candidates per station (4 pumps x 4 measurements: RUN, FRQ, RSPD, CSPD) and validates each against the PI Web API.
+
+2.2) Identify multi-pump and VFD stations
+get_scada_history() pulls 7 days of SCADA history for valid tags (excluding P1RUN/P2RUN).
+check_multiple_pumps_or_vfd_control() analyzes the history to identify stations with more than 2 pumps or VFD speed control. Stations with >2 pumps are excluded from the standard template flow.
+
+2.3) Check lead setpoint tags
+For remaining stations, checks if a _WLLEADSP tag exists. Stations with a lead setpoint get the _cte_leadsp template; those without get _cte_lead.
+
+2.4) Join reference data and export
+Joins with plant basin assignments (get_ls_by_plant()) and wetwell diameter data (get_dia_by_ls()). These are currently loaded from RData files but are placeholder functions intended to be replaced with computed lookups.
+Exports to data/pi_af_import.csv with columns: BASIN, STATION_NAME, CMMS_ASSET_ID, PI_TAG, Dia, TEMPLATE
+________________________________
+
+Step 3: Format for PI AF CSV Loader
+update_pi_af_format() reads data/pi_af_import.csv and builds the hierarchical CSV structure required by the PI Asset Framework bulk import tool.
+
+Output hierarchy:
+WASTEWATER
+  ¢|¢w¢w EST FLOW
+        ¢|¢w¢w {BASIN}
+              ¢|¢w¢w {STATION_NAME}  (Template: _Liftstation)
+                    ¢u¢w¢w CMMS Asset ID  (Attribute)
+                    ¢u¢w¢w PI Tag         (Attribute)
+                    ¢u¢w¢w Wetwell Area   (Attribute)
+                    ¢u¢w¢w cte            (Element, template varies)
+                    ¢|¢w¢w hrt            (Element, template: _hrt)
+
+Exports to out/pi_af_loader.csv.
+
+
+D. Craig Jones, PE
+Manager - W/WW Modeling & Analysis
+Direct: (904) 727-8762
+
+-----Original Appointment-----
+From: Orr, Jim <orrjd@jea.com>
+Sent: Friday, February 6, 2026 10:13 AM
+To: Orr, Jim; Orr, Jim; Bedoya, Juan; Schoettler, Kyle C.; Jones, Craig
+Cc: Strickland, Matt J.; Nettles, Casey D.; Eaton, Michael T.
+Subject: I&I Use-Case Scoping ¡V PI Vision / PI Datalink
+When: Wednesday, February 11, 2026 9:00 AM-10:00 AM (UTC-05:00) Eastern Time (US & Canada).
+Where: Pearl Street (onsite ¡V Office/Meeting room TBD)
+
+Hi Team,
+The purpose of this meeting is to align on the I&I analysis use-case and understand goals, data needs, and how PI tools are being used, in order to appropriately scope support and training.
+Location:
+Pearl Street (onsite ¡V Office/Meeting room TBD)
+Microsoft Teams link included as an option
+Proposed agenda:
+
+  *   Overview of the I&I use-case and desired outcomes
+
+  *   How PI Vision and PI Datalink are being used (or planned to be used)
+
+  *   Source data involved (tags, measurements, time ranges)
+
+  *   Calculated values currently relied on and where those calculations live
+
+  *   Use of the ADS Sliicer application and how it fits into the workflow
+
+  *   Next steps for scoping and training support
+
+Thanks,
+Jim
+
+
+________________________________________________________________________________
+Microsoft Teams meeting
+Join: https://teams.microsoft.com/meet/22549038732823?p=WseeLwU2qZm2moAXHH
+Meeting ID: 225 490 387 328 23
+Passcode: rB7ie7n4
+________________________________
+Need help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi%40thread.v2/0?context=%7b%22Tid%22%3a%22c0d91960-576d-4631-bc37-56584b7dc8db%22%2c%22Oid%22%3a%22b116b979-ae3a-4c7a-bac3-7f38a541a2a2%22%7d>
+Dial in by phone
++1 469-208-1810,,351893839#<tel:+14692081810,,351893839> United States, Carrollton
+Find a local number<https://dialin.teams.microsoft.com/7f16dcab-d946-4f6a-8038-ba775494cd86?id=351893839>
+Phone conference ID: 351 893 839#
+Join on a video conferencing device
+Tenant key: jea@m.webex.com<mailto:jea@m.webex.com>
+Video ID: 117 295 823 1
+More info<https://www.webex.com/msteams?confid=1172958231&tenantkey=jea&domain=m.webex.com>
+For organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=b116b979-ae3a-4c7a-bac3-7f38a541a2a2&tenantId=c0d91960-576d-4631-bc37-56584b7dc8db&threadId=19_meeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>
+Teams retains all content to comply with State of Florida public records laws. All chat messages, documents, and recordings are retained. Do not put sensitive or confidential information in chat.
+________________________________________________________________________________

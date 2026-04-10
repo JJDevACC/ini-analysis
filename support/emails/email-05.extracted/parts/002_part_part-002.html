@@ -1,0 +1,569 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css" style="display:none;"> P {margin-top:0;margin-bottom:0;} </style>
+</head>
+<body dir="ltr">
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+Zipped R files are attached with README on structure.</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+The pipeline has three steps, each with an output:</div>
+<table style="margin-bottom: 1px; box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;" data-editing-info="{&quot;topBorderColor&quot;:&quot;#ABABAB&quot;,&quot;bottomBorderColor&quot;:&quot;#ABABAB&quot;,&quot;verticalBorderColor&quot;:&quot;#ABABAB&quot;,&quot;hasHeaderRow&quot;:false,&quot;hasFirstColumn&quot;:false,&quot;hasBandedRows&quot;:false,&quot;hasBandedColumns&quot;:false,&quot;bgColorEven&quot;:null,&quot;bgColorOdd&quot;:&quot;#EEEEEE&quot;,&quot;headerRowColor&quot;:&quot;#ABABAB&quot;,&quot;tableBorderFormat&quot;:0,&quot;verticalAlign&quot;:null}" id="table_0">
+<tbody>
+<tr>
+<td style="text-align: left; border-width: 1px; border-style: solid; border-color: rgb(171, 171, 171); vertical-align: top; width: 307.333px; height: 22px; min-width: 15px; box-sizing: border-box;" data-editing-info="{&quot;vAlignOverride&quot;:true}">
+<div style="text-align: left; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<b><u>Validate_gis()</u></b></div>
+<ul style="text-align: left; margin-top: 0px; margin-bottom: 0px; list-style-type: disc;" data-editing-info="{&quot;applyListStyleFromLevel&quot;:true}">
+<li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation">pulls tags currently in GIS</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">checks if they are still valid,</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Tries to guess the invalid tag names</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">export is a CSV file<br>
+for manual check and<br>
+pass to Kirk to update GIS<br>
+<br>
+</div>
+</li></ul>
+<div style="text-align: left; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<b><u>Build_af()</u></b></div>
+<ul style="text-align: left; margin-top: 0px; margin-bottom: 0px; list-style-type: disc;" data-editing-info="{&quot;applyListStyleFromLevel&quot;:true}">
+<li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Checks if tags exist for<br>
+P1, P2, P3, P4 + RUN, FRQ, RSPD, CSPD</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">If tag does exist, pull 7 days of SCADA history to confirm data is valid</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Remove VFD and &gt;3 pumps</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Get Plant Basin for each station from GIS</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Get Wetwell diameter from EAM or PI AF</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Export to CSV file for manual check<br>
+<br>
+</div>
+</li></ul>
+<div style="text-align: left; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<b><u>Export_af()</u></b></div>
+<ul style="text-align: left; margin-top: 0px; margin-bottom: 0px; list-style-type: disc;" data-editing-info="{&quot;applyListStyleFromLevel&quot;:true}">
+<li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Check if station is LEADSP or LEAD&nbsp;</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Parse into PI Builder friendly format</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div style="text-align: left;" role="presentation" class="elementToProof">Export CSV to upload into AF</div>
+</li></ul>
+<div style="text-align: left; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt;">
+<br>
+</div>
+</td>
+<td style="text-align: left; border-width: 1px; border-style: solid; border-color: rgb(171, 171, 171); vertical-align: top; width: 227.467px; height: 22px; min-width: 15px; box-sizing: border-box;" data-editing-info="{&quot;vAlignOverride&quot;:true}">
+<div style="text-align: left; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt;">
+<img size="11891" style="width: 406px; height: 463px;" height="463" width="406" id="image_0" data-outlook-trace="F:1|T:1" src="cid:149eb06f-7483-4202-8672-983f7320ff06"></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+The output files for each is attached.</div>
+<ul style="margin-top: 0px; margin-bottom: 0px; list-style-type: disc;" data-editing-info="{&quot;applyListStyleFromLevel&quot;:true}">
+<li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div role="presentation" class="elementToProof">Validate_gis() = pi_tag_master_list.csv</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div role="presentation" class="elementToProof">Build_af() = pi_af_import.csv</div>
+</li><li style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<div role="presentation" class="elementToProof">Export_af() = Pi_af_loader.csv</div>
+</li></ul>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+I no longer have access to the Pi Builder Excel add-on, but the pi_af_loader.csv file should work to refresh AF</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div class="elementToProof" id="Signature">
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<p style="margin: 0in 0in 1pt; font-family: Aptos, sans-serif; font-size: 12pt;" class="elementToProof">
+<span style="font-family: Tahoma, sans-serif; font-size: 10pt; color: rgb(118, 113, 113);"><b>D. Craig Jones, PE</b></span></p>
+<p style="margin: 4pt 0in 0in; font-family: Aptos, sans-serif; font-size: 12pt;" class="elementToProof">
+<span style="font-family: Tahoma, sans-serif; font-size: 10pt; color: rgb(118, 113, 113);">Manager - W/WW Modeling &amp; Analysis</span></p>
+<p style="margin: 4pt 0in 0in; font-family: Aptos, sans-serif; font-size: 12pt;" class="elementToProof">
+<span style="font-family: Tahoma, sans-serif; font-size: 10pt; color: rgb(118, 113, 113);">Direct: (904) 727-8762</span></p>
+<p style="margin: 0in; font-family: Aptos, sans-serif; font-size: 12pt;" class="elementToProof">
+&nbsp;</p>
+</div>
+<div id="appendonsend"></div>
+<hr style="display:inline-block;width:98%" tabindex="-1">
+<div id="divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" style="font-size:11pt" color="#000000"><b>From:</b> Orr, Jim &lt;orrjd@jea.com&gt;<br>
+<b>Sent:</b> Thursday, February 12, 2026 11:24 AM<br>
+<b>To:</b> Jones, Craig &lt;jonedc@jea.com&gt;; Bedoya, Juan &lt;bedojc@jea.com&gt;; Schoettler, Kyle C. &lt;schokc@jea.com&gt;<br>
+<b>Cc:</b> Strickland, Matt J. &lt;strimj@jea.com&gt;; Nettles, Casey D. &lt;nettad@jea.com&gt;; Eaton, Michael T. &lt;EatoMT@jea.com&gt;<br>
+<b>Subject:</b> Re: I&amp;I Use-Case Scoping – PI Vision / PI Datalink</font>
+<div>&nbsp;</div>
+</div>
+<style type="text/css" style="display:none">
+<!--
+p
+	{margin-top:0;
+	margin-bottom:0}
+-->
+</style>
+<div dir="ltr">
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+Thank you, everyone, for taking the time to meet yesterday.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+Craig - thanks.&nbsp; Will you provide the source code for any/all of these workflows so I can review and reverse engineer.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+Below are my notes from the meeting.&nbsp; Please let me know if there are any corrections needed, or if I missed anything.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+---</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+Additional Information Needed:</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Source code:&nbsp; R code that gets data from GIS and populates elements/attributes in PI Asset Framework. (Craig)</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Source code:&nbsp; Script that uses PI Web API to create the CSV file that is currently uploaded manually into ADS Prism. (Craig)</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Write up from Craig on the PI Vision performance issue. (Craig)</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Spreadsheet that designates which lift stations are Class 1, 2, 3, and 4 that also corresponds to the elements in PI AF. (Juan/Casey)</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+## PI Vision Example</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Use hollybrook pump station as an example for a PI Vision screen.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+      - Hollybrook has a flow meter that sends data to ADS Prism.&nbsp;</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+## PI Datalink Example</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Use hollybrook pump station as an example.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+## PI Vision Performance Issue</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Craig has a write up on it.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- PI Vision is taking a long time to show a graph but using PI Web API is much quicker.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Hypothesis: The data is being output as an AF Analysis instead of to a PI Point. &nbsp;Therefore, generating a view of the history of data may take longer because it has to calculate all those analysis each time, as opposed to getting the data history from a PI
+ Point.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+## CSV File Uploading into ADS Sliicer</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Craig has script that generates this CSV file</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- This data is the calculated flow from the Class 1, 2, and 3 lift stations that needs to be deducted from the class 4 lift stations.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- ADS Prism API has an endpoint that we can POST to, to directly insert the data.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+## TRITON Device Flow Data from ADS to PI</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Devices have been/are being installed to measure flow to class 4 lift stations with variable speed pumps. &nbsp;Need to get this data from ADS Prism into PI similar to the ECHO device data that we are moving.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+## Juan's Question on Consultant use of PI Datalink</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Yes, the consultants would need to be issued a JEA 4+2 account.</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+- Once issued a 4+2 they can put in a PC support ticket to have Datalink installed, if they're using a JEA virtual machine or have a JEA laptop.&nbsp;&nbsp;</div>
+<ul data-editing-info="{&quot;applyListStyleFromLevel&quot;:false,&quot;unorderedStyleType&quot;:2}" style="margin-top:0px; margin-bottom:0px">
+<li style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0); list-style-type:&quot;- &quot;">
+<div role="presentation" class="x_elementToProof">Alternatively, we are looking into have an icon added in Citrix for Excel with datalink pre-installed.&nbsp; I can provide an update when I get more info on this implementation.</div>
+</li></ul>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+Thanks,</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof" id="x_Signature">
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:11pt; color:rgb(0,0,0)">
+<br>
+</div>
+<p class="x_elementToProof" style="margin:0in 0in 1pt; font-family:Calibri,sans-serif; font-size:11pt">
+<span style="font-family:Tahoma,sans-serif; font-size:10pt; color:rgb(118,113,113)"><b>Jim Orr, P.E.</b></span></p>
+<p class="x_elementToProof" style="margin:4pt 0in 0in; font-family:Calibri,sans-serif; font-size:11pt">
+<span style="font-family:Tahoma,sans-serif; font-size:10pt; color:rgb(118,113,113)">Mobile: (904) 524-5094</span></p>
+<p class="x_elementToProof" style="margin:4pt 0in 0in; font-family:Calibri,sans-serif; font-size:11pt">
+&nbsp;</p>
+</div>
+<div id="x_appendonsend"></div>
+<hr tabindex="-1" style="display:inline-block; width:98%">
+<div id="x_divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" color="#000000" style="font-size:11pt"><b>From:</b> Jones, Craig &lt;jonedc@jea.com&gt;<br>
+<b>Sent:</b> Thursday, February 12, 2026 9:40 AM<br>
+<b>To:</b> Orr, Jim &lt;orrjd@jea.com&gt;; Bedoya, Juan &lt;bedojc@jea.com&gt;; Schoettler, Kyle C. &lt;schokc@jea.com&gt;<br>
+<b>Cc:</b> Strickland, Matt J. &lt;strimj@jea.com&gt;; Nettles, Casey D. &lt;nettad@jea.com&gt;; Eaton, Michael T. &lt;EatoMT@jea.com&gt;<br>
+<b>Subject:</b> RE: I&amp;I Use-Case Scoping – PI Vision / PI Datalink</font>
+<div>&nbsp;</div>
+</div>
+<style>
+<!--
+@font-face
+	{font-family:Wingdings}
+@font-face
+	{font-family:"MS Gothic"}
+@font-face
+	{font-family:"Cambria Math"}
+@font-face
+	{font-family:Calibri}
+@font-face
+	{font-family:Aptos}
+@font-face
+	{font-family:Tahoma}
+@font-face
+	{font-family:"Segoe UI"}
+p.x_x_MsoNormal, li.x_x_MsoNormal, div.x_x_MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif}
+a:link, span.x_x_MsoHyperlink
+	{color:blue;
+	text-decoration:underline}
+span.x_x_EmailStyle22
+	{font-family:"Aptos",sans-serif;
+	color:windowtext}
+.x_x_MsoChpDefault
+	{font-size:10.0pt}
+@page WordSection1
+	{margin:1.0in 1.0in 1.0in 1.0in}
+ol
+	{margin-bottom:0in}
+ul
+	{margin-bottom:0in}
+-->
+</style>
+<div lang="EN-US" style="word-wrap:break-word">
+<div class="x_x_WordSection1">
+<p class="x_x_MsoNormal">Thanks for meeting with us yesterday.</p>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<p class="x_x_MsoNormal">Attached is the README in Markdown for the PI Asset Framework tag loader script.</p>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<div class="x_x_MsoNormal" align="center" style="text-align:center">
+<hr size="1" width="100%" align="center">
+</div>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<p class="x_x_MsoNormal"><b>Step 1: Build PI Tags from GIS</b></p>
+<p class="x_x_MsoNormal"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>1.1) Get list of tags from GIS</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Downloads pump station features from GWPR, filters to in-service lift stations with a CMMS asset ID.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">get_ls_from_gis &lt;- function() {</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; load_gis_ps() %&gt;%</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; st_drop_geometry() %&gt;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i># remove x,y</i></span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; filter(FAC_STATE == &quot;INS&quot;) %&gt;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i># In-Service Only</i></span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; filter(!is.na(CMMS_ASSET_ID)) %&gt;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i># Has CMMS_ASSET_ID</i></span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; filter(SUBTYPE == 1) %&gt;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i># is a Liftstation</i></span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; dplyr::select(STREET_NAME, STREET_NUMBER, CMMS_ASSET_ID, PI_TAG)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">}</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>1.2) Classify and validate tags</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">classify_tags()&nbsp;splits tags into categories and checks each against the PI Web API.&nbsp;print_tag_summary()&nbsp;displays the results as a tree.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; levelName matches&nbsp;&nbsp;&nbsp;&nbsp; pct</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">1 GWPR/Sewer_Dataset/Station&nbsp;&nbsp;&nbsp; 1696</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">2&nbsp; |--Missing Data (NA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; (1%)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">3&nbsp; |--Missing Underscore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1674</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">4&nbsp; |&nbsp;&nbsp; |--Bad Tag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp; (1.2%)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">5&nbsp; |&nbsp;&nbsp; °--Valid Otherwise&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1654 (97.5%)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">6&nbsp; |--Correct Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">7&nbsp; |&nbsp;&nbsp; |--Bad Tag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; (0%)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">8&nbsp; |&nbsp;&nbsp; °--OK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; (0%)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in"><span style="font-family:&quot;Courier New&quot;">9&nbsp; °--No SCADA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp; (0.3%)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>1.3) Try to guess correct tag names</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">For tags that are missing or invalid,&nbsp;guess_tag_name()&nbsp;builds candidate tag names from the street name and address, then checks each against the PI Web API.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Candidate format:&nbsp;{site}:{grid}:{first 3 chars of street}{address}_{measurement}.</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>{site} = wwl, for liftstations</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>{grid} = north, east, south, west, nassau, stjohns</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>{first 3 chars of street}{address}, see&nbsp;guess.R</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>{measurement} = used&nbsp;_P1RUN&nbsp;because it is common to all liftstations.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Suffixes tried:</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>&quot;&quot;&nbsp;(standard station)</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>&quot;B&quot;&nbsp;(booster pump)</p>
+<p class="x_x_MsoNormal" style="margin-left:1.0in; text-indent:-.25in"><span style="font-size:10.0pt; font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span>&quot;-1&quot;&nbsp;(new station placeholder)</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Stops at the first valid match per asset to minimize API calls.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>1.4) Export</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">The corrected tags are joined back with the original GIS data and exported to&nbsp;data/pi_tag_master_list.csv. Duplicate CMMS_ASSET_IDs and PI_TAGs are printed as warnings for manual review.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<div class="x_x_MsoNormal" align="center" style="text-align:center">
+<hr size="1" width="100%" align="center">
+</div>
+<p class="x_x_MsoNormal"><b>Step 2: Check Pump Tags and Build AF Import Data</b></p>
+<p class="x_x_MsoNormal"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal"><b>2.1) Check all pump tags</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">check_all_pump_tags()&nbsp;generates 16 tag candidates per station (4 pumps x 4 measurements: RUN, FRQ, RSPD, CSPD) and validates each against the PI Web API.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>2.2) Identify multi-pump and VFD stations</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">get_scada_history()&nbsp;pulls 7 days of SCADA history for valid tags (excluding P1RUN/P2RUN).</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">check_multiple_pumps_or_vfd_control()&nbsp;analyzes the history to identify stations with more than 2 pumps or VFD speed control. Stations with &gt;2 pumps are excluded from the standard template flow.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>2.3) Check lead setpoint tags</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">For remaining stations, checks if a&nbsp;_WLLEADSP&nbsp;tag exists. Stations with a lead setpoint get the&nbsp;_cte_leadsp&nbsp;template; those without get&nbsp;_cte_lead.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><b>2.4) Join reference data and export</b></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Joins with plant basin assignments (get_ls_by_plant()) and wetwell diameter data (get_dia_by_ls()). These are currently loaded from RData files but are placeholder functions intended to be replaced with computed
+ lookups.</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Exports to&nbsp;data/pi_af_import.csv&nbsp;with columns: BASIN, STATION_NAME, CMMS_ASSET_ID, PI_TAG, Dia, TEMPLATE</p>
+<div class="x_x_MsoNormal" align="center" style="text-align:center">
+<hr size="1" width="100%" align="center">
+</div>
+<p class="x_x_MsoNormal"><b>&nbsp;</b></p>
+<p class="x_x_MsoNormal"><b>Step 3: Format for PI AF CSV Loader</b></p>
+<p class="x_x_MsoNormal">update_pi_af_format()&nbsp;reads&nbsp;data/pi_af_import.csv&nbsp;and builds the hierarchical CSV structure required by the PI Asset Framework bulk import tool.</p>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Output hierarchy:</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">WASTEWATER</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp; └── EST FLOW</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── {BASIN}</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── {STATION_NAME}&nbsp; (Template: _Liftstation)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family:&quot;Courier New&quot;">├</span><span style="font-family:&quot;Courier New&quot;">── CMMS Asset ID&nbsp; (Attribute)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family:&quot;Courier New&quot;">├</span><span style="font-family:&quot;Courier New&quot;">── PI Tag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Attribute)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family:&quot;Courier New&quot;">├</span><span style="font-family:&quot;Courier New&quot;">── Wetwell Area&nbsp;&nbsp; (Attribute)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family:&quot;Courier New&quot;">├</span><span style="font-family:&quot;Courier New&quot;">── cte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Element, template varies)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in"><span style="font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── hrt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Element, template: _hrt)</span></p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">&nbsp;</p>
+<p class="x_x_MsoNormal" style="margin-left:.5in">Exports to&nbsp;out/pi_af_loader.csv.</p>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<div>
+<div>
+<div>
+<p class="x_x_MsoNormal" style="margin-bottom:1.0pt"><b><span style="font-size:10.0pt; font-family:&quot;Tahoma&quot;,sans-serif; color:#767171">D. Craig Jones, PE</span></b></p>
+<p class="x_x_MsoNormal" style="margin-top:4.0pt"><span style="font-size:10.0pt; font-family:&quot;Tahoma&quot;,sans-serif; color:#767171">Manager - W/WW Modeling &amp; Analysis</span></p>
+<p class="x_x_MsoNormal" style="margin-top:4.0pt"><span style="font-size:10.0pt; font-family:&quot;Tahoma&quot;,sans-serif; color:#767171">Direct: (904) 727-8762</span></p>
+</div>
+</div>
+</div>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<div>
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; font-family:&quot;Calibri&quot;,sans-serif">-----Original Appointment-----<br>
+<b>From:</b> Orr, Jim &lt;orrjd@jea.com&gt; <br>
+<b>Sent:</b> Friday, February 6, 2026 10:13 AM<br>
+<b>To:</b> Orr, Jim; Orr, Jim; Bedoya, Juan; Schoettler, Kyle C.; Jones, Craig<br>
+<b>Cc:</b> Strickland, Matt J.; Nettles, Casey D.; Eaton, Michael T.<br>
+<b>Subject:</b> I&amp;I Use-Case Scoping – PI Vision / PI Datalink<br>
+<b>When:</b> Wednesday, February 11, 2026 9:00 AM-10:00 AM (UTC-05:00) Eastern Time (US &amp; Canada).<br>
+<b>Where:</b> Pearl Street (onsite – Office/Meeting room TBD)</span></p>
+</div>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; color:black">Hi Team,</span></p>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; color:black">The purpose of this meeting is to align on the I&amp;I analysis use-case and understand goals, data needs, and how PI tools are being used, in order to appropriately scope support and training.</span></p>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><b><span style="font-size:11.0pt; color:black">Location:</span></b><span style="font-size:11.0pt; color:black"><br>
+Pearl Street (onsite – Office/Meeting room TBD)<br>
+Microsoft Teams link included as an option</span></p>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><b><span style="font-size:11.0pt; color:black">Proposed agenda:</span></b><span style="font-size:11.0pt; color:black"></span></p>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<ul type="disc">
+<li class="x_x_MsoNormal" style="color:black"><span style="font-size:11.0pt">Overview of the I&amp;I use-case and desired outcomes</span></li></ul>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<ul type="disc">
+<li class="x_x_MsoNormal" style="color:black"><span style="font-size:11.0pt">How PI Vision and PI Datalink are being used (or planned to be used)</span></li></ul>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<ul type="disc">
+<li class="x_x_MsoNormal" style="color:black"><span style="font-size:11.0pt">Source data involved (tags, measurements, time ranges)</span></li></ul>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<ul type="disc">
+<li class="x_x_MsoNormal" style="color:black"><span style="font-size:11.0pt">Calculated values currently relied on and where those calculations live</span></li></ul>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<ul type="disc">
+<li class="x_x_MsoNormal" style="color:black"><span style="font-size:11.0pt">Use of the ADS Sliicer application and how it fits into the workflow</span></li></ul>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<ul type="disc">
+<li class="x_x_MsoNormal" style="color:black"><span style="font-size:11.0pt">Next steps for scoping and training support</span></li></ul>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; color:black">&nbsp;</span></p>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; color:black">Thanks,</span></p>
+</div>
+<div style="margin-top:12.0pt; margin-bottom:12.0pt">
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; color:black">Jim</span></p>
+</div>
+<div>
+<p class="x_x_MsoNormal"><span style="font-size:11.0pt; color:black">&nbsp;</span></p>
+</div>
+<p class="x_x_MsoNormal">&nbsp;</p>
+<div>
+<div style="margin-bottom:.25in; overflow:hidden">
+<p class="x_x_MsoNormal"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">________________________________________________________________________________</span></p>
+</div>
+<div style="margin-bottom:9.0pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text"><b><span style="font-size:15.0pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">Microsoft Teams meeting</span></b></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text"><b><span style="font-size:15.0pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">Join:
+</span></b></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="https://teams.microsoft.com/meet/22549038732823?p=WseeLwU2qZm2moAXHH" title="Meeting join"><span style="font-size:15.0pt; color:#5B5FC7">https://teams.microsoft.com/meet/22549038732823?p=WseeLwU2qZm2moAXHH</span></a>
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text-secondary"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">Meeting ID:
+</span></span><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">225 490 387 328 23</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:24.0pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text-secondary"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">Passcode:
+</span></span><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">rB7ie7n4</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:9.0pt">
+<div class="x_x_MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+<hr size="1" width="100%" align="center">
+</span></div>
+</div>
+<div style="margin-bottom:.25in">
+<p class="x_x_MsoNormal"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="https://aka.ms/JoinTeamsMeeting?omkt=en-US"><span style="font-size:10.5pt; color:#5B5FC7">Need help?</span></a>
+</span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">|</span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+<a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi%40thread.v2/0?context=%7b%22Tid%22%3a%22c0d91960-576d-4631-bc37-56584b7dc8db%22%2c%22Oid%22%3a%22b116b979-ae3a-4c7a-bac3-7f38a541a2a2%22%7d">
+<span style="font-size:10.5pt; color:#5B5FC7">System reference</span></a> </span>
+</p>
+</div>
+<div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text"><b><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">Dial in by phone</span></b></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="tel:+14692081810,,351893839"><span style="font-size:10.5pt; color:#5B5FC7">+1 469-208-1810,,351893839#</span></a>
+</span><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">United States, Carrollton</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="https://dialin.teams.microsoft.com/7f16dcab-d946-4f6a-8038-ba775494cd86?id=351893839"><span style="font-size:10.5pt; color:#5B5FC7">Find a local number</span></a>
+</span></p>
+</div>
+</div>
+<div style="margin-bottom:.25in">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text-secondary"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">Phone conference ID:
+</span></span><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">351 893 839#</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-headline"><b><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">Join on a video conferencing device</span></b></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">Tenant key:
+</span></span><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="mailto:jea@m.webex.com">jea@m.webex.com</a></span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:4.5pt">
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text-secondary"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">Video ID:
+</span></span><span class="x_x_me-email-text"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">117 295 823 1</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+</span></p>
+</div>
+<div style="margin-bottom:.25in">
+<p class="x_x_MsoNormal"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="https://www.webex.com/msteams?confid=1172958231&amp;tenantkey=jea&amp;domain=m.webex.com" target="_blank"><span style="font-size:10.5pt; color:#5B5FC7">More info</span></a>
+</span></p>
+</div>
+<div>
+<p class="x_x_MsoNormal"><span class="x_x_me-email-text-secondary"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">For organizers:
+</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424"><a href="https://teams.microsoft.com/meetingOptions/?organizerId=b116b979-ae3a-4c7a-bac3-7f38a541a2a2&amp;tenantId=c0d91960-576d-4631-bc37-56584b7dc8db&amp;threadId=19_meeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi@thread.v2&amp;messageId=0&amp;language=en-US" target="_blank"><span style="font-size:10.5pt; color:#5B5FC7">Meeting
+ options</span></a> </span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">|</span><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">
+<a href="https://dialin.teams.microsoft.com/usp/pstnconferencing" target="_blank">
+<span style="font-size:10.5pt; color:#5B5FC7">Reset dial-in PIN</span></a> </span>
+</p>
+</div>
+<div style="margin-top:.25in; margin-bottom:4.5pt">
+<div>
+<p class="x_x_MsoNormal"><span style="font-size:10.5pt; font-family:&quot;Segoe UI&quot;,sans-serif; color:#616161">Teams retains all content to comply with State of Florida public records laws. All chat messages, documents, and recordings are retained. Do not put sensitive
+ or confidential information in chat.</span></p>
+</div>
+</div>
+<div style="margin-bottom:.25in; overflow:hidden">
+<p class="x_x_MsoNormal"><span style="font-family:&quot;Segoe UI&quot;,sans-serif; color:#242424">________________________________________________________________________________</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

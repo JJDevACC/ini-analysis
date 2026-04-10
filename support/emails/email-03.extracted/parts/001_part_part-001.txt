@@ -1,0 +1,110 @@
+There is a tag for HourlyOutFlow in AF that can be downloaded with Datalink or the REST WebAPI
+
+It's calculated by pump flow * runtime per hour
+[cid:099e585c-a048-4898-95cc-43f4272c7767]
+
+[cid:e68d89d4-9c1a-441b-9df4-2fb245ff6f8d]
+
+
+Formatting the CSV into Prism is finicky, example attached.
+
+That's correct, uploading CSV is a drag-and-drop thing. We create a location to associate with the flow data.
+
+
+
+D. Craig Jones, PE
+
+Manager - W/WW Modeling & Analysis
+
+Direct: (904) 727-8762
+
+
+
+________________________________
+From: Orr, Jim <orrjd@jea.com>
+Sent: Friday, February 6, 2026 1:44 PM
+To: Jones, Craig <jonedc@jea.com>
+Subject: Re: I&I Use-Case Scoping – PI Vision / PI Datalink
+
+Thanks, Craig.  This is very helpful AND interesting.
+
+A few questions:
+
+  *
+How do you generate the CSV file?
+  *
+Can you send me an example of the CSV file you upload?
+  *
+How frequently is a new CSV file uploaded?
+     *
+I assume it's uploaded by logging into the ADS Prism site and dropping it somewhere, is that right?
+
+Thanks,
+
+
+Jim Orr, P.E.
+
+Mobile: (904) 524-5094
+
+
+
+________________________________
+From: Jones, Craig <jonedc@jea.com>
+Sent: Friday, February 6, 2026 12:52 PM
+To: Orr, Jim <orrjd@jea.com>
+Subject: Re: I&I Use-Case Scoping – PI Vision / PI Datalink
+
+
+
+
+D. Craig Jones, PE
+
+Manager - W/WW Modeling & Analysis
+
+Direct: (904) 727-8762
+
+
+
+________________________________
+From: Jones, Craig <jonedc@jea.com>
+Sent: Friday, February 6, 2026 12:52 PM
+To: Orr, Jim <orrjd@jea.com>
+Subject: Re: I&I Use-Case Scoping – PI Vision / PI Datalink
+
+Jim—attached is some of the background.
+
+PRISM collects field flow monitoring data from several gravity flow meters and rain gauges in the system.
+[cid:4ec10a3e-08d9-4b66-badd-1d754b413dc0]
+
+
+Flow and Rainfall from PRISM are analyzed with Sliicer to disaggregate flow into dry-weather and wet-weather components.
+[cid:6723c19d-fbd7-420e-8909-14d208b1db74]
+
+Basin properties are applied to build metrics, such as how much infiltration do we have in terms of pipe lengths (for example).
+
+To isolate each basin into it's respective influence areas, we subtract upstream flow entering the basin from the total flow leaving the basin. Most of the large flows are metered, but some of the smaller flows we want to import from AF.
+
+Currently, we have the ability to create a location in Sliicer and import flow from AF as a CSV file. But, we would like the ability to import that information from an API connection to AF.
+[cid:bc00bcf3-6a40-4733-8b73-de96692f67df]
+
+The second part being, we would like to take the analysis from Sliicer and export it to PowerBI to build dashboards.
+
+
+The AF flow is estimated from cycle time in AF
+[cid:115a8f91-b606-4087-a173-cb1dc1d61204]
+
+D. Craig Jones, PE
+
+Manager - W/WW Modeling & Analysis
+
+Direct: (904) 727-8762
+
+
+
+________________________________
+From:
+Sent: Friday, February 6, 2026 12:26 PM
+Subject: Accepted: I&I Use-Case Scoping – PI Vision / PI Datalink
+When: Wed 2/11/2026 9:00 AM - 10:00 AM
+Where: Pearl Street (onsite – Office/Meeting room TBD)
+

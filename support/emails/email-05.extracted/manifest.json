@@ -1,0 +1,87 @@
+{
+  "source_eml": "support/emails/email-05.eml",
+  "output_dir": "support/emails/email-05.extracted",
+  "headers_file": "support/emails/email-05.extracted/headers.txt",
+  "parts": [
+    {
+      "index": 1,
+      "content_type": "text/plain",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 11868,
+      "sha256": "0faae9edcdad4c3390c4137c6bc1ccff24b04505336ede8b21419d7450824af5",
+      "path": "support/emails/email-05.extracted/parts/001_part_part-001.txt"
+    },
+    {
+      "index": 2,
+      "content_type": "text/html",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 50479,
+      "sha256": "22c60b28136e6dc63e7b0e3d5639afb205688fda7b378307421ddcc6281f1594",
+      "path": "support/emails/email-05.extracted/parts/002_part_part-002.html"
+    },
+    {
+      "index": 3,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "149eb06f-7483-4202-8672-983f7320ff06",
+      "size_bytes": 11891,
+      "sha256": "90dd8459de86e53ee329a5218963a71b86a8b182fc7ea3bcd18a36f61de495f4",
+      "path": "support/emails/email-05.extracted/parts/003_inline_149eb06f-7483-4202-8672-_image.png"
+    },
+    {
+      "index": 4,
+      "content_type": "text/html",
+      "content_disposition": "attachment",
+      "filename_header": "package_structure.html",
+      "content_id": null,
+      "size_bytes": 10105,
+      "sha256": "dfe6cd94e331008c10051638a64c197a16bddef3c8a787d88ecb24c952072c30",
+      "path": "support/emails/email-05.extracted/parts/004_attachment_package_structure.html"
+    },
+    {
+      "index": 5,
+      "content_type": "text/csv",
+      "content_disposition": "attachment",
+      "filename_header": "pi_tag_master_list.csv",
+      "content_id": null,
+      "size_bytes": 95423,
+      "sha256": "933f3c1b5075b8c8cc694e0c5d72b54ffb0c437a52110a3d50904c09491f6825",
+      "path": "support/emails/email-05.extracted/parts/005_attachment_pi_tag_master_list.csv"
+    },
+    {
+      "index": 6,
+      "content_type": "text/csv",
+      "content_disposition": "attachment",
+      "filename_header": "pi_af_loader.csv",
+      "content_id": null,
+      "size_bytes": 897334,
+      "sha256": "15a588b9f0fa4e9fd8814d4bb6539a70a4416ed5d61f77cf902b9f590bf804c0",
+      "path": "support/emails/email-05.extracted/parts/006_attachment_pi_af_loader.csv"
+    },
+    {
+      "index": 7,
+      "content_type": "text/csv",
+      "content_disposition": "attachment",
+      "filename_header": "pi_af_import.csv",
+      "content_id": null,
+      "size_bytes": 117184,
+      "sha256": "648ff2dd89ff22e8d30ed4a4e2eadfb2c5c999850ca4b51f19394da883b02228",
+      "path": "support/emails/email-05.extracted/parts/007_attachment_pi_af_import.csv"
+    },
+    {
+      "index": 8,
+      "content_type": "application/x-zip-compressed",
+      "content_disposition": "attachment",
+      "filename_header": "R.zip",
+      "content_id": null,
+      "size_bytes": 181045,
+      "sha256": "4c597ab64cc4699776ed6a6f1ffd69cdea61266ae05b805118e48421625e8666",
+      "path": "support/emails/email-05.extracted/parts/008_attachment_R.zip"
+    }
+  ]
+}

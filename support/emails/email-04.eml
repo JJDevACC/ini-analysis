@@ -1,0 +1,1139 @@
+Received: from MW4PR09MB9217.namprd09.prod.outlook.com (2603:10b6:303:1fd::19)
+ by PH0PR09MB10669.namprd09.prod.outlook.com with HTTPS; Thu, 12 Feb 2026
+ 14:40:14 +0000
+Received: from MW4PR09MB8931.namprd09.prod.outlook.com (2603:10b6:303:1f6::22)
+ by MW4PR09MB9217.namprd09.prod.outlook.com (2603:10b6:303:1fd::19) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9611.13; Thu, 12 Feb
+ 2026 14:40:10 +0000
+Received: from MW4PR09MB8931.namprd09.prod.outlook.com
+ ([fe80::90b3:5fac:164c:8f63]) by MW4PR09MB8931.namprd09.prod.outlook.com
+ ([fe80::90b3:5fac:164c:8f63%4]) with mapi id 15.20.9611.012; Thu, 12 Feb 2026
+ 14:40:09 +0000
+From: "Jones, Craig" <jonedc@jea.com>
+To: "Orr, Jim" <orrjd@jea.com>, "Bedoya, Juan" <bedojc@jea.com>, "Schoettler,
+ Kyle C." <schokc@jea.com>
+CC: "Strickland, Matt J." <strimj@jea.com>, "Nettles, Casey D."
+	<nettad@jea.com>, "Eaton, Michael T." <EatoMT@jea.com>
+Subject:
+	=?big5?B?UkU6IEkmSSBVc2UtQ2FzZSBTY29waW5nIKFWIFBJIFZpc2lvbiAvIFBJIERhdGFs?=
+ =?big5?Q?ink?=
+Thread-Topic:
+	=?big5?B?SSZJIFVzZS1DYXNlIFNjb3BpbmcgoVYgUEkgVmlzaW9uIC8gUEkgRGF0YWxpbms=?=
+Thread-Index: AdyXewy+0KGTZEy2d0Ow0dmjgNk0dwEsX7lg
+X-MS-Exchange-MessageSentRepresentingType: 1
+Date: Thu, 12 Feb 2026 14:40:09 +0000
+Message-ID:
+	<MW4PR09MB8931D3E7ECB73407F2375B38D260A@MW4PR09MB8931.namprd09.prod.outlook.com>
+References:
+	<MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com>
+In-Reply-To:
+	<MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: MW4PR09MB8931.namprd09.prod.outlook.com
+X-MS-Has-Attach: yes
+X-MS-Exchange-Organization-Network-Message-Id:
+	b7db6e93-cc61-400a-1877-08de6a449f4b
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=jea.com;
+x-ms-traffictypediagnostic:
+	MW4PR09MB8931:EE_|MW4PR09MB9217:EE_|PH0PR09MB10669:EE_
+x-ms-exchange-crosstenant-originalarrivaltime: 12 Feb 2026 14:40:09.5769 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-id: c0d91960-576d-4631-bc37-56584b7dc8db
+x-ms-exchange-transport-crosstenantheadersstamped: MW4PR09MB9217
+x-ms-exchange-transport-endtoendlatency: 00:00:04.7943950
+x-ms-exchange-crosstenant-network-message-id:
+	b7db6e93-cc61-400a-1877-08de6a449f4b
+x-ms-office365-filtering-correlation-id: b7db6e93-cc61-400a-1877-08de6a449f4b
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:zh-tw;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:MW4PR09MB8931.namprd09.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(6049299003)(366016)(7142099003)(13003099007)(8096899003)(41050700001);DIR:INT;
+x-microsoft-antispam:
+	BCL:0;ARA:13230040|6049299003|366016|7142099003|13003099007|8096899003|41050700001;
+x-ms-exchange-processed-by-bccfoldering: 15.20.9611.001
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-crosstenant-authsource: MW4PR09MB8931.namprd09.prod.outlook.com
+x-ms-exchange-atpmessageproperties: SL
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(425001)(930201)(20251009189)(140003);
+X-Microsoft-Antispam-Message-Info:
+	4phoDAXoOhfAQeDsUnvVtOiiAjicwE565+mPdmUCVcxjA4TO94uXpH4IlrKajjAHMXBllOYmopUfcv3VvVPyx9O/r1jQ5nCphALW0UxdImBd695Rsc/jG5CDDrVLXMPv4czmJsYY9iNjTPuXwShHyJjC61a+ynVRwqRjaMExQ90WivgbTutqv5+aCt4/6OQeWr0HQZnTLg+rsel2BJw/pw/Spmo3W6Fhedtrl8j3vIEoSzzOalf8yyM08PpdMRgY6aNrr1u69I591pVoBnwF7DtZs2KF/A4v/phTk93Fin/E5qfxaNlCamfRdOS2DLawx4OszMkKNpResmujYuwzvbMP9kg0NQg7QWDmn0Sh2DoY3a+kJcThLs0M6/nqbnPYHkFv1sVNw4h+903+aYsUl8qb0WNhpK067RaD4oWzvRt5coF9ECIGk7uy83yI9OR8foGtZktaW9ApYoPdJMjxyDNKA623ii24lFI43YoznKciMut5AqFNUClKBRpHG5CSQP+HND1FtZ9HulGuU+7/mizmdqVWlBsINToF3OyAbdLZlqTukjlxJM9P4q+gdBaD+SvMuILQ5xjT46GNzzHqFK38dYN74o7IDWakciVjqSRk+4S1n3Yqqmf1LC2XHjWodT1FNXbs9QQTTwujwS8gq57fUXj2VLpJjGhcG14GNlLc0e2dwhZfRFex9X38xUaX6yroSzSLfKvmYsdN5fEKZju14KOeeZVB+NoIQmRztJRlb7dkHWLA8JPQuXFp952Dx91FXSzFvoZr7Q5ejc5zR6kcZIQbD4R2Jl3pzSW4bsrZlWLRV7rJx6x5MLKtNC7TTkQD3JoWiIeHat5vtAR253462h07AjnZqGIR/D2jbVQ=
+Content-Type: multipart/mixed;
+	boundary="_004_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_"
+MIME-Version: 1.0
+
+--_004_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_
+Content-Type: multipart/alternative;
+	boundary="_000_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_"
+
+--_000_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+VGhhbmtzIGZvciBtZWV0aW5nIHdpdGggdXMgeWVzdGVyZGF5Lg0KDQpBdHRhY2hlZCBpcyB0aGUg
+UkVBRE1FIGluIE1hcmtkb3duIGZvciB0aGUgUEkgQXNzZXQgRnJhbWV3b3JrIHRhZyBsb2FkZXIg
+c2NyaXB0Lg0KDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0KDQpTdGVwIDE6IEJ1
+aWxkIFBJIFRhZ3MgZnJvbSBHSVMNCg0KMS4xKSBHZXQgbGlzdCBvZiB0YWdzIGZyb20gR0lTDQpE
+b3dubG9hZHMgcHVtcCBzdGF0aW9uIGZlYXR1cmVzIGZyb20gR1dQUiwgZmlsdGVycyB0byBpbi1z
+ZXJ2aWNlIGxpZnQgc3RhdGlvbnMgd2l0aCBhIENNTVMgYXNzZXQgSUQuDQoNCmdldF9sc19mcm9t
+X2dpcyA8LSBmdW5jdGlvbigpIHsNCiAgICBsb2FkX2dpc19wcygpICU+JQ0KICAgIHN0X2Ryb3Bf
+Z2VvbWV0cnkoKSAlPiUgICAgICAgICAgICAgICAgICAjIHJlbW92ZSB4LHkNCiAgICBmaWx0ZXIo
+RkFDX1NUQVRFID09ICJJTlMiKSAlPiUgICAgICAgICAgIyBJbi1TZXJ2aWNlIE9ubHkNCiAgICBm
+aWx0ZXIoIWlzLm5hKENNTVNfQVNTRVRfSUQpKSAlPiUgICAgICAgIyBIYXMgQ01NU19BU1NFVF9J
+RA0KICAgIGZpbHRlcihTVUJUWVBFID09IDEpICU+JSAgICAgICAgICAgICAgICAjIGlzIGEgTGlm
+dHN0YXRpb24NCiAgICBkcGx5cjo6c2VsZWN0KFNUUkVFVF9OQU1FLCBTVFJFRVRfTlVNQkVSLCBD
+TU1TX0FTU0VUX0lELCBQSV9UQUcpDQp9DQoNCjEuMikgQ2xhc3NpZnkgYW5kIHZhbGlkYXRlIHRh
+Z3MNCmNsYXNzaWZ5X3RhZ3MoKSBzcGxpdHMgdGFncyBpbnRvIGNhdGVnb3JpZXMgYW5kIGNoZWNr
+cyBlYWNoIGFnYWluc3QgdGhlIFBJIFdlYiBBUEkuIHByaW50X3RhZ19zdW1tYXJ5KCkgZGlzcGxh
+eXMgdGhlIHJlc3VsdHMgYXMgYSB0cmVlLg0KDQogICAgICAgICAgICAgICAgICAgbGV2ZWxOYW1l
+IG1hdGNoZXMgICAgIHBjdA0KMSBHV1BSL1Nld2VyX0RhdGFzZXQvU3RhdGlvbiAgICAxNjk2DQoy
+ICB8LS1NaXNzaW5nIERhdGEgKE5BKSAgICAgICAgICAgMTcgICAgKDElKQ0KMyAgfC0tTWlzc2lu
+ZyBVbmRlcnNjb3JlICAgICAgICAxNjc0DQo0ICB8ICAgfC0tQmFkIFRhZyAgICAgICAgICAgICAg
+ICAgMjAgICgxLjIlKQ0KNSAgfCAgIKJYLS1WYWxpZCBPdGhlcndpc2UgICAgICAgMTY1NCAoOTcu
+NSUpDQo2ICB8LS1Db3JyZWN0IEZvcm1hdCAgICAgICAgICAgICAgIDANCjcgIHwgICB8LS1CYWQg
+VGFnICAgICAgICAgICAgICAgICAgMCAgICAoMCUpDQo4ICB8ICAgolgtLU9LICAgICAgICAgICAg
+ICAgICAgICAgICAwICAgICgwJSkNCjkgIKJYLS1ObyBTQ0FEQSAgICAgICAgICAgICAgICAgICAg
+IDUgICgwLjMlKQ0KDQoxLjMpIFRyeSB0byBndWVzcyBjb3JyZWN0IHRhZyBuYW1lcw0KRm9yIHRh
+Z3MgdGhhdCBhcmUgbWlzc2luZyBvciBpbnZhbGlkLCBndWVzc190YWdfbmFtZSgpIGJ1aWxkcyBj
+YW5kaWRhdGUgdGFnIG5hbWVzIGZyb20gdGhlIHN0cmVldCBuYW1lIGFuZCBhZGRyZXNzLCB0aGVu
+IGNoZWNrcyBlYWNoIGFnYWluc3QgdGhlIFBJIFdlYiBBUEkuDQoNCkNhbmRpZGF0ZSBmb3JtYXQ6
+IHtzaXRlfTp7Z3JpZH06e2ZpcnN0IDMgY2hhcnMgb2Ygc3RyZWV0fXthZGRyZXNzfV97bWVhc3Vy
+ZW1lbnR9Lg0KoVAgICAgICAgICB7c2l0ZX0gPSB3d2wsIGZvciBsaWZ0c3RhdGlvbnMNCqFQICAg
+ICAgICAge2dyaWR9ID0gbm9ydGgsIGVhc3QsIHNvdXRoLCB3ZXN0LCBuYXNzYXUsIHN0am9obnMN
+CqFQICAgICAgICAge2ZpcnN0IDMgY2hhcnMgb2Ygc3RyZWV0fXthZGRyZXNzfSwgc2VlIGd1ZXNz
+LlINCqFQICAgICAgICAge21lYXN1cmVtZW50fSA9IHVzZWQgX1AxUlVOIGJlY2F1c2UgaXQgaXMg
+Y29tbW9uIHRvIGFsbCBsaWZ0c3RhdGlvbnMuDQoNClN1ZmZpeGVzIHRyaWVkOg0KoVAgICAgICAg
+ICAiIiAoc3RhbmRhcmQgc3RhdGlvbikNCqFQICAgICAgICAgIkIiIChib29zdGVyIHB1bXApDQqh
+UCAgICAgICAgICItMSIgKG5ldyBzdGF0aW9uIHBsYWNlaG9sZGVyKQ0KDQpTdG9wcyBhdCB0aGUg
+Zmlyc3QgdmFsaWQgbWF0Y2ggcGVyIGFzc2V0IHRvIG1pbmltaXplIEFQSSBjYWxscy4NCg0KMS40
+KSBFeHBvcnQNClRoZSBjb3JyZWN0ZWQgdGFncyBhcmUgam9pbmVkIGJhY2sgd2l0aCB0aGUgb3Jp
+Z2luYWwgR0lTIGRhdGEgYW5kIGV4cG9ydGVkIHRvIGRhdGEvcGlfdGFnX21hc3Rlcl9saXN0LmNz
+di4gRHVwbGljYXRlIENNTVNfQVNTRVRfSURzIGFuZCBQSV9UQUdzIGFyZSBwcmludGVkIGFzIHdh
+cm5pbmdzIGZvciBtYW51YWwgcmV2aWV3Lg0KDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fXw0KU3RlcCAyOiBDaGVjayBQdW1wIFRhZ3MgYW5kIEJ1aWxkIEFGIEltcG9ydCBEYXRhDQoN
+CjIuMSkgQ2hlY2sgYWxsIHB1bXAgdGFncw0KY2hlY2tfYWxsX3B1bXBfdGFncygpIGdlbmVyYXRl
+cyAxNiB0YWcgY2FuZGlkYXRlcyBwZXIgc3RhdGlvbiAoNCBwdW1wcyB4IDQgbWVhc3VyZW1lbnRz
+OiBSVU4sIEZSUSwgUlNQRCwgQ1NQRCkgYW5kIHZhbGlkYXRlcyBlYWNoIGFnYWluc3QgdGhlIFBJ
+IFdlYiBBUEkuDQoNCjIuMikgSWRlbnRpZnkgbXVsdGktcHVtcCBhbmQgVkZEIHN0YXRpb25zDQpn
+ZXRfc2NhZGFfaGlzdG9yeSgpIHB1bGxzIDcgZGF5cyBvZiBTQ0FEQSBoaXN0b3J5IGZvciB2YWxp
+ZCB0YWdzIChleGNsdWRpbmcgUDFSVU4vUDJSVU4pLg0KY2hlY2tfbXVsdGlwbGVfcHVtcHNfb3Jf
+dmZkX2NvbnRyb2woKSBhbmFseXplcyB0aGUgaGlzdG9yeSB0byBpZGVudGlmeSBzdGF0aW9ucyB3
+aXRoIG1vcmUgdGhhbiAyIHB1bXBzIG9yIFZGRCBzcGVlZCBjb250cm9sLiBTdGF0aW9ucyB3aXRo
+ID4yIHB1bXBzIGFyZSBleGNsdWRlZCBmcm9tIHRoZSBzdGFuZGFyZCB0ZW1wbGF0ZSBmbG93Lg0K
+DQoyLjMpIENoZWNrIGxlYWQgc2V0cG9pbnQgdGFncw0KRm9yIHJlbWFpbmluZyBzdGF0aW9ucywg
+Y2hlY2tzIGlmIGEgX1dMTEVBRFNQIHRhZyBleGlzdHMuIFN0YXRpb25zIHdpdGggYSBsZWFkIHNl
+dHBvaW50IGdldCB0aGUgX2N0ZV9sZWFkc3AgdGVtcGxhdGU7IHRob3NlIHdpdGhvdXQgZ2V0IF9j
+dGVfbGVhZC4NCg0KMi40KSBKb2luIHJlZmVyZW5jZSBkYXRhIGFuZCBleHBvcnQNCkpvaW5zIHdp
+dGggcGxhbnQgYmFzaW4gYXNzaWdubWVudHMgKGdldF9sc19ieV9wbGFudCgpKSBhbmQgd2V0d2Vs
+bCBkaWFtZXRlciBkYXRhIChnZXRfZGlhX2J5X2xzKCkpLiBUaGVzZSBhcmUgY3VycmVudGx5IGxv
+YWRlZCBmcm9tIFJEYXRhIGZpbGVzIGJ1dCBhcmUgcGxhY2Vob2xkZXIgZnVuY3Rpb25zIGludGVu
+ZGVkIHRvIGJlIHJlcGxhY2VkIHdpdGggY29tcHV0ZWQgbG9va3Vwcy4NCkV4cG9ydHMgdG8gZGF0
+YS9waV9hZl9pbXBvcnQuY3N2IHdpdGggY29sdW1uczogQkFTSU4sIFNUQVRJT05fTkFNRSwgQ01N
+U19BU1NFVF9JRCwgUElfVEFHLCBEaWEsIFRFTVBMQVRFDQpfX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fXw0KDQpTdGVwIDM6IEZvcm1hdCBmb3IgUEkgQUYgQ1NWIExvYWRlcg0KdXBkYXRl
+X3BpX2FmX2Zvcm1hdCgpIHJlYWRzIGRhdGEvcGlfYWZfaW1wb3J0LmNzdiBhbmQgYnVpbGRzIHRo
+ZSBoaWVyYXJjaGljYWwgQ1NWIHN0cnVjdHVyZSByZXF1aXJlZCBieSB0aGUgUEkgQXNzZXQgRnJh
+bWV3b3JrIGJ1bGsgaW1wb3J0IHRvb2wuDQoNCk91dHB1dCBoaWVyYXJjaHk6DQpXQVNURVdBVEVS
+DQogIKJ8oneidyBFU1QgRkxPVw0KICAgICAgICCifKJ3oncge0JBU0lOfQ0KICAgICAgICAgICAg
+ICCifKJ3oncge1NUQVRJT05fTkFNRX0gIChUZW1wbGF0ZTogX0xpZnRzdGF0aW9uKQ0KICAgICAg
+ICAgICAgICAgICAgICCidaJ3oncgQ01NUyBBc3NldCBJRCAgKEF0dHJpYnV0ZSkNCiAgICAgICAg
+ICAgICAgICAgICAgonWid6J3IFBJIFRhZyAgICAgICAgIChBdHRyaWJ1dGUpDQogICAgICAgICAg
+ICAgICAgICAgIKJ1oneidyBXZXR3ZWxsIEFyZWEgICAoQXR0cmlidXRlKQ0KICAgICAgICAgICAg
+ICAgICAgICCidaJ3oncgY3RlICAgICAgICAgICAgKEVsZW1lbnQsIHRlbXBsYXRlIHZhcmllcykN
+CiAgICAgICAgICAgICAgICAgICAgonyid6J3IGhydCAgICAgICAgICAgIChFbGVtZW50LCB0ZW1w
+bGF0ZTogX2hydCkNCg0KRXhwb3J0cyB0byBvdXQvcGlfYWZfbG9hZGVyLmNzdi4NCg0KDQpELiBD
+cmFpZyBKb25lcywgUEUNCk1hbmFnZXIgLSBXL1dXIE1vZGVsaW5nICYgQW5hbHlzaXMNCkRpcmVj
+dDogKDkwNCkgNzI3LTg3NjINCg0KLS0tLS1PcmlnaW5hbCBBcHBvaW50bWVudC0tLS0tDQpGcm9t
+OiBPcnIsIEppbSA8b3JyamRAamVhLmNvbT4NClNlbnQ6IEZyaWRheSwgRmVicnVhcnkgNiwgMjAy
+NiAxMDoxMyBBTQ0KVG86IE9yciwgSmltOyBPcnIsIEppbTsgQmVkb3lhLCBKdWFuOyBTY2hvZXR0
+bGVyLCBLeWxlIEMuOyBKb25lcywgQ3JhaWcNCkNjOiBTdHJpY2tsYW5kLCBNYXR0IEouOyBOZXR0
+bGVzLCBDYXNleSBELjsgRWF0b24sIE1pY2hhZWwgVC4NClN1YmplY3Q6IEkmSSBVc2UtQ2FzZSBT
+Y29waW5nIKFWIFBJIFZpc2lvbiAvIFBJIERhdGFsaW5rDQpXaGVuOiBXZWRuZXNkYXksIEZlYnJ1
+YXJ5IDExLCAyMDI2IDk6MDAgQU0tMTA6MDAgQU0gKFVUQy0wNTowMCkgRWFzdGVybiBUaW1lIChV
+UyAmIENhbmFkYSkuDQpXaGVyZTogUGVhcmwgU3RyZWV0IChvbnNpdGUgoVYgT2ZmaWNlL01lZXRp
+bmcgcm9vbSBUQkQpDQoNCkhpIFRlYW0sDQpUaGUgcHVycG9zZSBvZiB0aGlzIG1lZXRpbmcgaXMg
+dG8gYWxpZ24gb24gdGhlIEkmSSBhbmFseXNpcyB1c2UtY2FzZSBhbmQgdW5kZXJzdGFuZCBnb2Fs
+cywgZGF0YSBuZWVkcywgYW5kIGhvdyBQSSB0b29scyBhcmUgYmVpbmcgdXNlZCwgaW4gb3JkZXIg
+dG8gYXBwcm9wcmlhdGVseSBzY29wZSBzdXBwb3J0IGFuZCB0cmFpbmluZy4NCkxvY2F0aW9uOg0K
+UGVhcmwgU3RyZWV0IChvbnNpdGUgoVYgT2ZmaWNlL01lZXRpbmcgcm9vbSBUQkQpDQpNaWNyb3Nv
+ZnQgVGVhbXMgbGluayBpbmNsdWRlZCBhcyBhbiBvcHRpb24NClByb3Bvc2VkIGFnZW5kYToNCg0K
+ICAqICAgT3ZlcnZpZXcgb2YgdGhlIEkmSSB1c2UtY2FzZSBhbmQgZGVzaXJlZCBvdXRjb21lcw0K
+DQogICogICBIb3cgUEkgVmlzaW9uIGFuZCBQSSBEYXRhbGluayBhcmUgYmVpbmcgdXNlZCAob3Ig
+cGxhbm5lZCB0byBiZSB1c2VkKQ0KDQogICogICBTb3VyY2UgZGF0YSBpbnZvbHZlZCAodGFncywg
+bWVhc3VyZW1lbnRzLCB0aW1lIHJhbmdlcykNCg0KICAqICAgQ2FsY3VsYXRlZCB2YWx1ZXMgY3Vy
+cmVudGx5IHJlbGllZCBvbiBhbmQgd2hlcmUgdGhvc2UgY2FsY3VsYXRpb25zIGxpdmUNCg0KICAq
+ICAgVXNlIG9mIHRoZSBBRFMgU2xpaWNlciBhcHBsaWNhdGlvbiBhbmQgaG93IGl0IGZpdHMgaW50
+byB0aGUgd29ya2Zsb3cNCg0KICAqICAgTmV4dCBzdGVwcyBmb3Igc2NvcGluZyBhbmQgdHJhaW5p
+bmcgc3VwcG9ydA0KDQpUaGFua3MsDQpKaW0NCg0KDQpfX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0K
+TWljcm9zb2Z0IFRlYW1zIG1lZXRpbmcNCkpvaW46IGh0dHBzOi8vdGVhbXMubWljcm9zb2Z0LmNv
+bS9tZWV0LzIyNTQ5MDM4NzMyODIzP3A9V3NlZUx3VTJxWm0ybW9BWEhIDQpNZWV0aW5nIElEOiAy
+MjUgNDkwIDM4NyAzMjggMjMNClBhc3Njb2RlOiByQjdpZTduNA0KX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX18NCk5lZWQgaGVscD88aHR0cHM6Ly9ha2EubXMvSm9pblRlYW1zTWVldGlu
+Zz9vbWt0PWVuLVVTPiB8IFN5c3RlbSByZWZlcmVuY2U8aHR0cHM6Ly90ZWFtcy5taWNyb3NvZnQu
+Y29tL2wvbWVldHVwLWpvaW4vMTklM2FtZWV0aW5nX1ltTmhOMkl6TWpNdE1HSTVOQzAwTlRNMUxU
+ZzJNV1F0TnpKak9HTmtZakZqT0daaSU0MHRocmVhZC52Mi8wP2NvbnRleHQ9JTdiJTIyVGlkJTIy
+JTNhJTIyYzBkOTE5NjAtNTc2ZC00NjMxLWJjMzctNTY1ODRiN2RjOGRiJTIyJTJjJTIyT2lkJTIy
+JTNhJTIyYjExNmI5NzktYWUzYS00YzdhLWJhYzMtN2YzOGE1NDFhMmEyJTIyJTdkPg0KRGlhbCBp
+biBieSBwaG9uZQ0KKzEgNDY5LTIwOC0xODEwLCwzNTE4OTM4MzkjPHRlbDorMTQ2OTIwODE4MTAs
+LDM1MTg5MzgzOT4gVW5pdGVkIFN0YXRlcywgQ2Fycm9sbHRvbg0KRmluZCBhIGxvY2FsIG51bWJl
+cjxodHRwczovL2RpYWxpbi50ZWFtcy5taWNyb3NvZnQuY29tLzdmMTZkY2FiLWQ5NDYtNGY2YS04
+MDM4LWJhNzc1NDk0Y2Q4Nj9pZD0zNTE4OTM4Mzk+DQpQaG9uZSBjb25mZXJlbmNlIElEOiAzNTEg
+ODkzIDgzOSMNCkpvaW4gb24gYSB2aWRlbyBjb25mZXJlbmNpbmcgZGV2aWNlDQpUZW5hbnQga2V5
+OiBqZWFAbS53ZWJleC5jb208bWFpbHRvOmplYUBtLndlYmV4LmNvbT4NClZpZGVvIElEOiAxMTcg
+Mjk1IDgyMyAxDQpNb3JlIGluZm88aHR0cHM6Ly93d3cud2ViZXguY29tL21zdGVhbXM/Y29uZmlk
+PTExNzI5NTgyMzEmdGVuYW50a2V5PWplYSZkb21haW49bS53ZWJleC5jb20+DQpGb3Igb3JnYW5p
+emVyczogTWVldGluZyBvcHRpb25zPGh0dHBzOi8vdGVhbXMubWljcm9zb2Z0LmNvbS9tZWV0aW5n
+T3B0aW9ucy8/b3JnYW5pemVySWQ9YjExNmI5NzktYWUzYS00YzdhLWJhYzMtN2YzOGE1NDFhMmEy
+JnRlbmFudElkPWMwZDkxOTYwLTU3NmQtNDYzMS1iYzM3LTU2NTg0YjdkYzhkYiZ0aHJlYWRJZD0x
+OV9tZWV0aW5nX1ltTmhOMkl6TWpNdE1HSTVOQzAwTlRNMUxUZzJNV1F0TnpKak9HTmtZakZqT0da
+aUB0aHJlYWQudjImbWVzc2FnZUlkPTAmbGFuZ3VhZ2U9ZW4tVVM+IHwgUmVzZXQgZGlhbC1pbiBQ
+SU48aHR0cHM6Ly9kaWFsaW4udGVhbXMubWljcm9zb2Z0LmNvbS91c3AvcHN0bmNvbmZlcmVuY2lu
+Zz4NClRlYW1zIHJldGFpbnMgYWxsIGNvbnRlbnQgdG8gY29tcGx5IHdpdGggU3RhdGUgb2YgRmxv
+cmlkYSBwdWJsaWMgcmVjb3JkcyBsYXdzLiBBbGwgY2hhdCBtZXNzYWdlcywgZG9jdW1lbnRzLCBh
+bmQgcmVjb3JkaW5ncyBhcmUgcmV0YWluZWQuIERvIG5vdCBwdXQgc2Vuc2l0aXZlIG9yIGNvbmZp
+ZGVudGlhbCBpbmZvcm1hdGlvbiBpbiBjaGF0Lg0KX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCg==
+
+--_000_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_
+Content-Type: text/html; charset="big5"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.me-email-text
+	{mso-style-name:me-email-text;}
+span.me-email-text-secondary
+	{mso-style-name:me-email-text-secondary;}
+span.me-email-headline
+	{mso-style-name:me-email-headline;}
+span.EmailStyle22
+	{mso-style-type:personal-reply;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:402798217;
+	mso-list-template-ids:-505655624;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:571278727;
+	mso-list-template-ids:-1812066784;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:886141067;
+	mso-list-template-ids:-1308985504;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style>
+</head>
+<body lang=3D"EN-US" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:brea=
+k-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Thanks for meeting with us yesterday.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Attached is the README in Markdown for the PI Asset =
+Framework tag loader script.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center">
+<hr size=3D"1" width=3D"100%" align=3D"center">
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b>Step 1: Build PI Tags from GIS<o:p></o:p></b></p>
+<p class=3D"MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>1.1) Get list of tags =
+from GIS<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Downloads pump station fe=
+atures from GWPR, filters to in-service lift stations with a CMMS asset ID.=
+<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">get_ls_from_gis &lt;- function() {<o:p></o:p></=
+span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; load_gis_ps() %&gt;%<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; st_drop_geometry() %&gt;%&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;
+<i># remove x,y</i><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; filter(FAC_STATE =3D=3D &quo=
+t;INS&quot;) %&gt;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i># In-Service Only</i><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; filter(!is.na(CMMS_ASSET_ID)=
+) %&gt;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i># Has CMMS_ASSET_ID</i><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; filter(SUBTYPE =3D=3D 1) %&g=
+t;%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;
+<i># is a Liftstation</i><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; dplyr::select(STREET_NAME, S=
+TREET_NUMBER, CMMS_ASSET_ID, PI_TAG)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">}<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>1.2) Classify and vali=
+date tags<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">classify_tags()&nbsp;spli=
+ts tags into categories and checks each against the PI Web API.&nbsp;print_=
+tag_summary()&nbsp;displays the results as a tree.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; levelName mat=
+ches&nbsp;&nbsp;&nbsp;&nbsp; pct<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">1 GWPR/Sewer_Dataset/Station&nbsp;&nbsp;&nbsp; =
+1696<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">2&nbsp; |--Missing Data (NA)&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; (1%)<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">3&nbsp; |--Missing Underscore&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp; 1674<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">4&nbsp; |&nbsp;&nbsp; |--Bad Tag&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp; 20&nbsp; (1.2%)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">5&nbsp; |&nbsp;&nbsp; =A2X--Valid Otherwise&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1654 (97.5%)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">6&nbsp; |--Correct Format&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">7&nbsp; |&nbsp;&nbsp; |--Bad Tag&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; (0%)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">8&nbsp; |&nbsp;&nbsp; =A2X--OK&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; (0%)<o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in"><span style=3D"font-fami=
+ly:&quot;Courier New&quot;">9&nbsp; =A2X--No SCADA&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp; 5&nbsp; (0.3%)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b><o:p>&nbsp;</o:p></b><=
+/p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>1.3) Try to guess corr=
+ect tag names<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">For tags that are missing=
+ or invalid,&nbsp;guess_tag_name()&nbsp;builds candidate tag names from the=
+ street name and address, then checks each against the PI Web API.<o:p></o:=
+p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Candidate format:&nbsp;{s=
+ite}:{grid}:{first 3 chars of street}{address}_{measurement}.<o:p></o:p></p=
+>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>{site} =3D wwl, for liftstations<o:p></o:p><=
+/p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>{grid} =3D north, east, south, west, nassau,=
+ stjohns<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>{first 3 chars of street}{address}, see&nbsp=
+;guess.R<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>{measurement} =3D used&nbsp;_P1RUN&nbsp;beca=
+use it is common to all liftstations.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Suffixes tried:<o:p></o:p=
+></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l1 level1 lfo3">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>&quot;&quot;&nbsp;(standard station)<o:p></o=
+:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l1 level1 lfo3">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>&quot;B&quot;&nbsp;(booster pump)<o:p></o:p>=
+</p>
+<p class=3D"MsoNormal" style=3D"margin-left:1.0in;text-indent:-.25in;mso-li=
+st:l1 level1 lfo3">
+<![if !supportLists]><span style=3D"font-size:10.0pt;font-family:Symbol"><s=
+pan style=3D"mso-list:Ignore">=A1P<span style=3D"font:7.0pt &quot;Times New=
+ Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>&quot;-1&quot;&nbsp;(new station placeholder=
+)<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Stops at the first valid =
+match per asset to minimize API calls.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b><o:p>&nbsp;</o:p></b><=
+/p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>1.4) Export<o:p></o:p>=
+</b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">The corrected tags are jo=
+ined back with the original GIS data and exported to&nbsp;data/pi_tag_maste=
+r_list.csv. Duplicate CMMS_ASSET_IDs and PI_TAGs are printed as warnings fo=
+r manual review.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center">
+<hr size=3D"1" width=3D"100%" align=3D"center">
+</div>
+<p class=3D"MsoNormal"><b>Step 2: Check Pump Tags and Build AF Import Data<=
+o:p></o:p></b></p>
+<p class=3D"MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+<p class=3D"MsoNormal"><b>2.1) Check all pump tags<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">check_all_pump_tags()&nbs=
+p;generates 16 tag candidates per station (4 pumps x 4 measurements: RUN, F=
+RQ, RSPD, CSPD) and validates each against the PI Web API.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b><o:p>&nbsp;</o:p></b><=
+/p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>2.2) Identify multi-pu=
+mp and VFD stations<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">get_scada_history()&nbsp;=
+pulls 7 days of SCADA history for valid tags (excluding P1RUN/P2RUN).<o:p><=
+/o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">check_multiple_pumps_or_v=
+fd_control()&nbsp;analyzes the history to identify stations with more than =
+2 pumps or VFD speed control. Stations with &gt;2 pumps are excluded from t=
+he standard template flow.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b><o:p>&nbsp;</o:p></b><=
+/p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>2.3) Check lead setpoi=
+nt tags<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">For remaining stations, c=
+hecks if a&nbsp;_WLLEADSP&nbsp;tag exists. Stations with a lead setpoint ge=
+t the&nbsp;_cte_leadsp&nbsp;template; those without get&nbsp;_cte_lead.<o:p=
+></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b><o:p>&nbsp;</o:p></b><=
+/p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><b>2.4) Join reference da=
+ta and export<o:p></o:p></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Joins with plant basin as=
+signments (get_ls_by_plant()) and wetwell diameter data (get_dia_by_ls()). =
+These are currently loaded from RData files but are placeholder functions i=
+ntended to be replaced with computed
+ lookups.<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Exports to&nbsp;data/pi_a=
+f_import.csv&nbsp;with columns: BASIN, STATION_NAME, CMMS_ASSET_ID, PI_TAG,=
+ Dia, TEMPLATE<o:p></o:p></p>
+<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center">
+<hr size=3D"1" width=3D"100%" align=3D"center">
+</div>
+<p class=3D"MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+<p class=3D"MsoNormal"><b>Step 3: Format for PI AF CSV Loader<o:p></o:p></b=
+></p>
+<p class=3D"MsoNormal">update_pi_af_format()&nbsp;reads&nbsp;data/pi_af_imp=
+ort.csv&nbsp;and builds the hierarchical CSV structure required by the PI A=
+sset Framework bulk import tool.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Output hierarchy:<o:p></o=
+:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">WASTEWATER<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp; =A2|=A2w=A2w EST FLOW<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =A2|=
+=A2w=A2w {BASIN}<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =A2|=A2w=A2w {STATION_NAME}&nbsp; (Template:=
+ _Liftstation)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-family:&quot;Courier New&quot;">=A2u</span><span=
+ style=3D"font-family:&quot;Courier New&quot;">=A2w=A2w CMMS Asset ID&nbsp;=
+ (Attribute)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-family:&quot;Courier New&quot;">=A2u</span><span=
+ style=3D"font-family:&quot;Courier New&quot;">=A2w=A2w PI Tag&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Attribute)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-family:&quot;Courier New&quot;">=A2u</span><span=
+ style=3D"font-family:&quot;Courier New&quot;">=A2w=A2w Wetwell Area&nbsp;&=
+nbsp; (Attribute)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-family:&quot;Courier New&quot;">=A2u</span><span=
+ style=3D"font-family:&quot;Courier New&quot;">=A2w=A2w cte&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Element, template varie=
+s)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><span style=3D"font-famil=
+y:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =A2|=A2w=
+=A2w hrt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+(Element, template: _hrt)<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in">Exports to&nbsp;out/pi_af=
+_loader.csv.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:1.0pt"><b><span style=3D"font=
+-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:#767171">D. Cr=
+aig Jones, PE</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-top:4.0pt"><span style=3D"font-size:=
+10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:#767171">Manager - W=
+/WW Modeling &amp; Analysis</span><o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-top:4.0pt"><span style=3D"font-size:=
+10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:#767171">Direct: (90=
+4) 727-8762</span><o:p></o:p></p>
+</div>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">-----Original Appointment-----<br>
+<b>From:</b> Orr, Jim &lt;orrjd@jea.com&gt; <br>
+<b>Sent:</b> Friday, February 6, 2026 10:13 AM<br>
+<b>To:</b> Orr, Jim; Orr, Jim; Bedoya, Juan; Schoettler, Kyle C.; Jones, Cr=
+aig<br>
+<b>Cc:</b> Strickland, Matt J.; Nettles, Casey D.; Eaton, Michael T.<br>
+<b>Subject:</b> I&amp;I Use-Case Scoping =A1V PI Vision / PI Datalink<br>
+<b>When:</b> Wednesday, February 11, 2026 9:00 AM-10:00 AM (UTC-05:00) East=
+ern Time (US &amp; Canada).<br>
+<b>Where:</b> Pearl Street (onsite =A1V Office/Meeting room TBD)<o:p></o:p>=
+</span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">Hi Team=
+,<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">The pur=
+pose of this meeting is to align on the I&amp;I analysis use-case and under=
+stand goals, data needs, and how PI tools are being used, in order to appro=
+priately scope support and training.<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;color:black">Loca=
+tion:</span></b><span style=3D"font-size:11.0pt;color:black"><br>
+Pearl Street (onsite =A1V Office/Meeting room TBD)<br>
+Microsoft Teams link included as an option<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;color:black">Prop=
+osed agenda:</span></b><span style=3D"font-size:11.0pt;color:black"><o:p></=
+o:p></span></p>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<ul type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:black;mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto;mso-list:l2 level1 lfo1">
+<span style=3D"font-size:11.0pt">Overview of the I&amp;I use-case and desir=
+ed outcomes<o:p></o:p></span></li></ul>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<ul type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:black;mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto;mso-list:l2 level1 lfo1">
+<span style=3D"font-size:11.0pt">How PI Vision and PI Datalink are being us=
+ed (or planned to be used)<o:p></o:p></span></li></ul>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<ul type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:black;mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto;mso-list:l2 level1 lfo1">
+<span style=3D"font-size:11.0pt">Source data involved (tags, measurements, =
+time ranges)<o:p></o:p></span></li></ul>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<ul type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:black;mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto;mso-list:l2 level1 lfo1">
+<span style=3D"font-size:11.0pt">Calculated values currently relied on and =
+where those calculations live<o:p></o:p></span></li></ul>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<ul type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:black;mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto;mso-list:l2 level1 lfo1">
+<span style=3D"font-size:11.0pt">Use of the ADS Sliicer application and how=
+ it fits into the workflow<o:p></o:p></span></li></ul>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<ul type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:black;mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto;mso-list:l2 level1 lfo1">
+<span style=3D"font-size:11.0pt">Next steps for scoping and training suppor=
+t<o:p></o:p></span></li></ul>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black"><o:p>&n=
+bsp;</o:p></span></p>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">Thanks,=
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-top:12.0pt;margin-bottom:12.0pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black">Jim<o:p=
+></o:p></span></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:black"><o:p>&n=
+bsp;</o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<div>
+<div style=3D"margin-bottom:.25in;overflow:hidden">
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Segoe UI&quot;,sans=
+-serif;color:#242424">_____________________________________________________=
+___________________________<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:9.0pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-text"><b><span style=3D"font=
+-size:15.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">Mic=
+rosoft Teams meeting</span></b></span><span style=3D"font-family:&quot;Sego=
+e UI&quot;,sans-serif;color:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt;overflow-wrap: break-word">
+<p class=3D"MsoNormal"><span class=3D"me-email-text"><b><span style=3D"font=
+-size:15.0pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">Joi=
+n:
+</span></b></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-seri=
+f;color:#242424"><a href=3D"https://teams.microsoft.com/meet/22549038732823=
+?p=3DWseeLwU2qZm2moAXHH" title=3D"Meeting join"><span style=3D"font-size:15=
+.0pt;color:#5B5FC7">https://teams.microsoft.com/meet/22549038732823?p=3DWse=
+eLwU2qZm2moAXHH</span></a>
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-text-secondary"><span style=
+=3D"font-size:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#616=
+161">Meeting ID:
+</span></span><span class=3D"me-email-text"><span style=3D"font-size:10.5pt=
+;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">225 490 387 328=
+ 23</span></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif=
+;color:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:24.0pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-text-secondary"><span style=
+=3D"font-size:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#616=
+161">Passcode:
+</span></span><span class=3D"me-email-text"><span style=3D"font-size:10.5pt=
+;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">rB7ie7n4</span>=
+</span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;color:#24=
+2424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:9.0pt">
+<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span=
+ style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">
+<hr size=3D"1" width=3D"100%" align=3D"center">
+</span></div>
+</div>
+<div style=3D"margin-bottom:.25in">
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Segoe UI&quot;,sans=
+-serif;color:#242424"><a href=3D"https://aka.ms/JoinTeamsMeeting?omkt=3Den-=
+US"><span style=3D"font-size:10.5pt;color:#5B5FC7">Need help?</span></a>
+</span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;color:#61=
+6161">|</span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;co=
+lor:#242424">
+<a href=3D"https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmNhN2IzM=
+jMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi%40thread.v2/0?context=3D%7b%22Tid%2=
+2%3a%22c0d91960-576d-4631-bc37-56584b7dc8db%22%2c%22Oid%22%3a%22b116b979-ae=
+3a-4c7a-bac3-7f38a541a2a2%22%7d">
+<span style=3D"font-size:10.5pt;color:#5B5FC7">System reference</span></a> =
+<o:p></o:p></span></p>
+</div>
+<div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-text"><b><span style=3D"font=
+-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">Dial in by phone</sp=
+an></b></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;co=
+lor:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Segoe UI&quot;,sans=
+-serif;color:#242424"><a href=3D"tel:+14692081810,,351893839"><span style=
+=3D"font-size:10.5pt;color:#5B5FC7">+1 469-208-1810,,351893839#</span></a>
+</span><span class=3D"me-email-text"><span style=3D"font-size:10.5pt;font-f=
+amily:&quot;Segoe UI&quot;,sans-serif;color:#616161">United States, Carroll=
+ton</span></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif=
+;color:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Segoe UI&quot;,sans=
+-serif;color:#242424"><a href=3D"https://dialin.teams.microsoft.com/7f16dca=
+b-d946-4f6a-8038-ba775494cd86?id=3D351893839"><span style=3D"font-size:10.5=
+pt;color:#5B5FC7">Find a local number</span></a>
+<o:p></o:p></span></p>
+</div>
+</div>
+<div style=3D"margin-bottom:.25in">
+<p class=3D"MsoNormal"><span class=3D"me-email-text-secondary"><span style=
+=3D"font-size:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#616=
+161">Phone conference ID:
+</span></span><span class=3D"me-email-text"><span style=3D"font-size:10.5pt=
+;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">351 893 839#</s=
+pan></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;color=
+:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-headline"><b><span style=3D"=
+font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">Join on a video =
+conferencing device</span></b></span><span style=3D"font-family:&quot;Segoe=
+ UI&quot;,sans-serif;color:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-text"><span style=3D"font-si=
+ze:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#616161">Tenant=
+ key:
+</span></span><span class=3D"me-email-text"><span style=3D"font-size:10.5pt=
+;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424"><a href=3D"mail=
+to:jea@m.webex.com">jea@m.webex.com</a></span></span><span style=3D"font-fa=
+mily:&quot;Segoe UI&quot;,sans-serif;color:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:4.5pt">
+<p class=3D"MsoNormal"><span class=3D"me-email-text-secondary"><span style=
+=3D"font-size:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#616=
+161">Video ID:
+</span></span><span class=3D"me-email-text"><span style=3D"font-size:10.5pt=
+;font-family:&quot;Segoe UI&quot;,sans-serif;color:#242424">117 295 823 1</=
+span></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;colo=
+r:#242424">
+<o:p></o:p></span></p>
+</div>
+<div style=3D"margin-bottom:.25in">
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Segoe UI&quot;,sans=
+-serif;color:#242424"><a href=3D"https://www.webex.com/msteams?confid=3D117=
+2958231&amp;tenantkey=3Djea&amp;domain=3Dm.webex.com" target=3D"_blank"><sp=
+an style=3D"font-size:10.5pt;color:#5B5FC7">More info</span></a>
+<o:p></o:p></span></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span class=3D"me-email-text-secondary"><span style=
+=3D"font-size:10.5pt;font-family:&quot;Segoe UI&quot;,sans-serif;color:#616=
+161">For organizers:
+</span></span><span style=3D"font-family:&quot;Segoe UI&quot;,sans-serif;co=
+lor:#242424"><a href=3D"https://teams.microsoft.com/meetingOptions/?organiz=
+erId=3Db116b979-ae3a-4c7a-bac3-7f38a541a2a2&amp;tenantId=3Dc0d91960-576d-46=
+31-bc37-56584b7dc8db&amp;threadId=3D19_meeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2=
+MWQtNzJjOGNkYjFjOGZi@thread.v2&amp;messageId=3D0&amp;language=3Den-US" targ=
+et=3D"_blank"><span style=3D"font-size:10.5pt;color:#5B5FC7">Meeting
+ options</span></a> </span><span style=3D"font-family:&quot;Segoe UI&quot;,=
+sans-serif;color:#616161">|</span><span style=3D"font-family:&quot;Segoe UI=
+&quot;,sans-serif;color:#242424">
+<a href=3D"https://dialin.teams.microsoft.com/usp/pstnconferencing" target=
+=3D"_blank">
+<span style=3D"font-size:10.5pt;color:#5B5FC7">Reset dial-in PIN</span></a>=
+ <o:p></o:p></span></p>
+</div>
+<div style=3D"margin-top:.25in;margin-bottom:4.5pt">
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Se=
+goe UI&quot;,sans-serif;color:#616161">Teams retains all content to comply =
+with State of Florida public records laws. All chat messages, documents, an=
+d recordings are retained. Do not put sensitive
+ or confidential information in chat.<o:p></o:p></span></p>
+</div>
+</div>
+<div style=3D"margin-bottom:.25in;overflow:hidden">
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Segoe UI&quot;,sans=
+-serif;color:#242424">_____________________________________________________=
+___________________________<o:p></o:p></span></p>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_--
+
+--_004_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_
+Content-Type: application/octet-stream; name="README.md"
+Content-Description: README.md
+Content-Disposition: attachment; filename="README.md"; size=7664;
+	creation-date="Thu, 12 Feb 2026 14:36:15 GMT";
+	modification-date="Tue, 24 Feb 2026 19:33:55 GMT"
+Content-Transfer-Encoding: base64
+
+DQojIFN0ZXAgMTogQnVpbGQgUEkgVGFncyBmcm9tIEdJUw0KDQojIyAxLjEpIEdldCBsaXN0IG9m
+IHRhZ3MgZnJvbSBHSVMNCg0KRG93bmxvYWRzIHB1bXAgc3RhdGlvbiBmZWF0dXJlcyBmcm9tIEdX
+UFIsIGZpbHRlcnMgdG8gaW4tc2VydmljZSBsaWZ0IHN0YXRpb25zIHdpdGggYSBDTU1TIGFzc2V0
+IElELg0KDQpgYGByDQpnZXRfbHNfZnJvbV9naXMgPC0gZnVuY3Rpb24oKSB7DQogICAgbG9hZF9n
+aXNfcHMoKSAlPiUNCiAgICBzdF9kcm9wX2dlb21ldHJ5KCkgJT4lICAgICAgICAgICAgICAgICAg
+IyByZW1vdmUgeCx5DQogICAgZmlsdGVyKEZBQ19TVEFURSA9PSAiSU5TIikgJT4lICAgICAgICAg
+ICMgSW4tU2VydmljZSBPbmx5DQogICAgZmlsdGVyKCFpcy5uYShDTU1TX0FTU0VUX0lEKSkgJT4l
+ICAgICAgICMgSGFzIENNTVNfQVNTRVRfSUQNCiAgICBmaWx0ZXIoU1VCVFlQRSA9PSAxKSAlPiUg
+ICAgICAgICAgICAgICAgIyBpcyBhIExpZnRzdGF0aW9uDQogICAgZHBseXI6OnNlbGVjdChTVFJF
+RVRfTkFNRSwgU1RSRUVUX05VTUJFUiwgQ01NU19BU1NFVF9JRCwgUElfVEFHKQ0KfQ0KYGBgDQoN
+CiMjIDEuMikgQ2xhc3NpZnkgYW5kIHZhbGlkYXRlIHRhZ3MNCg0KYGNsYXNzaWZ5X3RhZ3MoKWAg
+c3BsaXRzIHRhZ3MgaW50byBjYXRlZ29yaWVzIGFuZCBjaGVja3MgZWFjaCBhZ2FpbnN0IHRoZSBQ
+SSBXZWIgQVBJLg0KYHByaW50X3RhZ19zdW1tYXJ5KClgIGRpc3BsYXlzIHRoZSByZXN1bHRzIGFz
+IGEgdHJlZS4NCg0KYGBgDQogICAgICAgICAgICAgICAgICAgbGV2ZWxOYW1lIG1hdGNoZXMgICAg
+IHBjdA0KMSBHV1BSL1Nld2VyX0RhdGFzZXQvU3RhdGlvbiAgICAxNjk2DQoyICB8LS1NaXNzaW5n
+IERhdGEgKE5BKSAgICAgICAgICAgMTcgICAgKDElKQ0KMyAgfC0tTWlzc2luZyBVbmRlcnNjb3Jl
+ICAgICAgICAxNjc0DQo0ICB8ICAgfC0tQmFkIFRhZyAgICAgICAgICAgICAgICAgMjAgICgxLjIl
+KQ0KNSAgfCAgIMKwLS1WYWxpZCBPdGhlcndpc2UgICAgICAgMTY1NCAoOTcuNSUpDQo2ICB8LS1D
+b3JyZWN0IEZvcm1hdCAgICAgICAgICAgICAgIDANCjcgIHwgICB8LS1CYWQgVGFnICAgICAgICAg
+ICAgICAgICAgMCAgICAoMCUpDQo4ICB8ICAgwrAtLU9LICAgICAgICAgICAgICAgICAgICAgICAw
+ICAgICgwJSkNCjkgIMKwLS1ObyBTQ0FEQSAgICAgICAgICAgICAgICAgICAgIDUgICgwLjMlKQ0K
+YGBgDQoNCiMjIDEuMykgVHJ5IHRvIGd1ZXNzIGNvcnJlY3QgdGFnIG5hbWVzDQoNCkZvciB0YWdz
+IHRoYXQgYXJlIG1pc3Npbmcgb3IgaW52YWxpZCwgYGd1ZXNzX3RhZ19uYW1lKClgIGJ1aWxkcyBj
+YW5kaWRhdGUgdGFnIG5hbWVzDQpmcm9tIHRoZSBzdHJlZXQgbmFtZSBhbmQgYWRkcmVzcywgdGhl
+biBjaGVja3MgZWFjaCBhZ2FpbnN0IHRoZSBQSSBXZWIgQVBJLg0KDQpDYW5kaWRhdGUgZm9ybWF0
+OiBge3NpdGV9OntncmlkfTp7Zmlyc3QgMyBjaGFycyBvZiBzdHJlZXR9e2FkZHJlc3N9X3ttZWFz
+dXJlbWVudH1gLg0KDQotIHtzaXRlfSA9IHd3bCwgZm9yIGxpZnRzdGF0aW9ucw0KLSB7Z3JpZH0g
+PSBub3J0aCwgZWFzdCwgc291dGgsIHdlc3QsIG5hc3NhdSwgc3Rqb2hucw0KLSB7Zmlyc3QgMyBj
+aGFycyBvZiBzdHJlZXR9e2FkZHJlc3N9LCBzZWUgYGd1ZXNzLlJgDQotIHttZWFzdXJlbWVudH0g
+PSB1c2VkIGBfUDFSVU5gIGJlY2F1c2UgaXQgaXMgY29tbW9uIHRvIGFsbCBsaWZ0c3RhdGlvbnMu
+DQoNClN1ZmZpeGVzIHRyaWVkOg0KLSBgIiJgIChzdGFuZGFyZCBzdGF0aW9uKQ0KLSBgIkIiYCAo
+Ym9vc3RlciBwdW1wKQ0KLSBgIi0xImAgKG5ldyBzdGF0aW9uIHBsYWNlaG9sZGVyKQ0KDQpTdG9w
+cyBhdCB0aGUgZmlyc3QgdmFsaWQgbWF0Y2ggcGVyIGFzc2V0IHRvIG1pbmltaXplIEFQSSBjYWxs
+cy4NCg0KIyMgMS40KSBFeHBvcnQNCg0KVGhlIGNvcnJlY3RlZCB0YWdzIGFyZSBqb2luZWQgYmFj
+ayB3aXRoIHRoZSBvcmlnaW5hbCBHSVMgZGF0YSBhbmQgZXhwb3J0ZWQNCnRvIGBkYXRhL3BpX3Rh
+Z19tYXN0ZXJfbGlzdC5jc3ZgLiBEdXBsaWNhdGUgQ01NU19BU1NFVF9JRHMgYW5kIFBJX1RBR3MN
+CmFyZSBwcmludGVkIGFzIHdhcm5pbmdzIGZvciBtYW51YWwgcmV2aWV3Lg0KDQotLS0NCg0KIyBT
+dGVwIDI6IENoZWNrIFB1bXAgVGFncyBhbmQgQnVpbGQgQUYgSW1wb3J0IERhdGENCg0KIyMgMi4x
+KSBDaGVjayBhbGwgcHVtcCB0YWdzDQoNCmBjaGVja19hbGxfcHVtcF90YWdzKClgIGdlbmVyYXRl
+cyAxNiB0YWcgY2FuZGlkYXRlcyBwZXIgc3RhdGlvbiAoNCBwdW1wcyB4IDQgbWVhc3VyZW1lbnRz
+Og0KUlVOLCBGUlEsIFJTUEQsIENTUEQpIGFuZCB2YWxpZGF0ZXMgZWFjaCBhZ2FpbnN0IHRoZSBQ
+SSBXZWIgQVBJLg0KDQojIyAyLjIpIElkZW50aWZ5IG11bHRpLXB1bXAgYW5kIFZGRCBzdGF0aW9u
+cw0KDQpgZ2V0X3NjYWRhX2hpc3RvcnkoKWAgcHVsbHMgNyBkYXlzIG9mIFNDQURBIGhpc3Rvcnkg
+Zm9yIHZhbGlkIHRhZ3MgKGV4Y2x1ZGluZyBQMVJVTi9QMlJVTikuDQoNCmBjaGVja19tdWx0aXBs
+ZV9wdW1wc19vcl92ZmRfY29udHJvbCgpYCBhbmFseXplcyB0aGUgaGlzdG9yeSB0byBpZGVudGlm
+eSBzdGF0aW9ucw0Kd2l0aCBtb3JlIHRoYW4gMiBwdW1wcyBvciBWRkQgc3BlZWQgY29udHJvbC4g
+U3RhdGlvbnMgd2l0aCA+MiBwdW1wcyBhcmUgZXhjbHVkZWQNCmZyb20gdGhlIHN0YW5kYXJkIHRl
+bXBsYXRlIGZsb3cuDQoNCiMjIDIuMykgQ2hlY2sgbGVhZCBzZXRwb2ludCB0YWdzDQoNCkZvciBy
+ZW1haW5pbmcgc3RhdGlvbnMsIGNoZWNrcyBpZiBhIGBfV0xMRUFEU1BgIHRhZyBleGlzdHMuIFN0
+YXRpb25zIHdpdGgNCmEgbGVhZCBzZXRwb2ludCBnZXQgdGhlIGBfY3RlX2xlYWRzcGAgdGVtcGxh
+dGU7IHRob3NlIHdpdGhvdXQgZ2V0IGBfY3RlX2xlYWRgLg0KDQojIyAyLjQpIEpvaW4gcmVmZXJl
+bmNlIGRhdGEgYW5kIGV4cG9ydA0KDQpKb2lucyB3aXRoIHBsYW50IGJhc2luIGFzc2lnbm1lbnRz
+IChgZ2V0X2xzX2J5X3BsYW50KClgKSBhbmQgd2V0d2VsbCBkaWFtZXRlcg0KZGF0YSAoYGdldF9k
+aWFfYnlfbHMoKWApLiBUaGVzZSBhcmUgY3VycmVudGx5IGxvYWRlZCBmcm9tIFJEYXRhIGZpbGVz
+IGJ1dCBhcmUNCnBsYWNlaG9sZGVyIGZ1bmN0aW9ucyBpbnRlbmRlZCB0byBiZSByZXBsYWNlZCB3
+aXRoIGNvbXB1dGVkIGxvb2t1cHMuDQoNCkV4cG9ydHMgdG8gYGRhdGEvcGlfYWZfaW1wb3J0LmNz
+dmAgd2l0aCBjb2x1bW5zOg0KQkFTSU4sIFNUQVRJT05fTkFNRSwgQ01NU19BU1NFVF9JRCwgUElf
+VEFHLCBEaWEsIFRFTVBMQVRFDQoNCi0tLQ0KDQojIFN0ZXAgMzogRm9ybWF0IGZvciBQSSBBRiBD
+U1YgTG9hZGVyDQoNCmB1cGRhdGVfcGlfYWZfZm9ybWF0KClgIHJlYWRzIGBkYXRhL3BpX2FmX2lt
+cG9ydC5jc3ZgIGFuZCBidWlsZHMgdGhlIGhpZXJhcmNoaWNhbA0KQ1NWIHN0cnVjdHVyZSByZXF1
+aXJlZCBieSB0aGUgUEkgQXNzZXQgRnJhbWV3b3JrIGJ1bGsgaW1wb3J0IHRvb2wuDQoNCk91dHB1
+dCBoaWVyYXJjaHk6DQpgYGANCldBU1RFV0FURVINCiAg4pSU4pSA4pSAIEVTVCBGTE9XDQogICAg
+ICAgIOKUlOKUgOKUgCB7QkFTSU59DQogICAgICAgICAgICAgIOKUlOKUgOKUgCB7U1RBVElPTl9O
+QU1FfSAgKFRlbXBsYXRlOiBfTGlmdHN0YXRpb24pDQogICAgICAgICAgICAgICAgICAgIOKUnOKU
+gOKUgCBDTU1TIEFzc2V0IElEICAoQXR0cmlidXRlKQ0KICAgICAgICAgICAgICAgICAgICDilJzi
+lIDilIAgUEkgVGFnICAgICAgICAgKEF0dHJpYnV0ZSkNCiAgICAgICAgICAgICAgICAgICAg4pSc
+4pSA4pSAIFdldHdlbGwgQXJlYSAgIChBdHRyaWJ1dGUpDQogICAgICAgICAgICAgICAgICAgIOKU
+nOKUgOKUgCBjdGUgICAgICAgICAgICAoRWxlbWVudCwgdGVtcGxhdGUgdmFyaWVzKQ0KICAgICAg
+ICAgICAgICAgICAgICDilJTilIDilIAgaHJ0ICAgICAgICAgICAgKEVsZW1lbnQsIHRlbXBsYXRl
+OiBfaHJ0KQ0KYGBgDQoNCkV4cG9ydHMgdG8gYG91dC9waV9hZl9sb2FkZXIuY3N2YC4NCg==
+
+--_004_MW4PR09MB8931D3E7ECB73407F2375B38D260AMW4PR09MB8931namp_--

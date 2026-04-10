@@ -1,0 +1,2 @@
+- Check to see if Wetwell diameter can be captured from existing GIS information
+- Check to see if Plant location can be captured from existing GIS information

@@ -1,0 +1,87 @@
+{
+  "source_eml": "support/emails/email-01.eml",
+  "output_dir": "support/emails/email-01.extracted",
+  "headers_file": "support/emails/email-01.extracted/headers.txt",
+  "parts": [
+    {
+      "index": 1,
+      "content_type": "text/plain",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 16681,
+      "sha256": "653930320bfc4f4082620137374ce1dad931630be150358801c0719e09dde647",
+      "path": "support/emails/email-01.extracted/parts/001_part_part-001.txt"
+    },
+    {
+      "index": 2,
+      "content_type": "text/html",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 74767,
+      "sha256": "a0c473237ca90ff6750b4daed1d60e9d003bff65089cd531bb220f9d5895b28f",
+      "path": "support/emails/email-01.extracted/parts/002_part_part-002.html"
+    },
+    {
+      "index": 3,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "149eb06f-7483-4202-8672-983f7320ff06",
+      "size_bytes": 11891,
+      "sha256": "90dd8459de86e53ee329a5218963a71b86a8b182fc7ea3bcd18a36f61de495f4",
+      "path": "support/emails/email-01.extracted/parts/003_inline_149eb06f-7483-4202-8672-_image.png"
+    },
+    {
+      "index": 4,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "bd4e1d4d-447d-46e5-88c6-a7ed0ee4c421",
+      "size_bytes": 20415,
+      "sha256": "96dadfd62b620a1885cf311582293fdad1f5c5c53042ec7fb0674e7bd952a0d0",
+      "path": "support/emails/email-01.extracted/parts/004_inline_bd4e1d4d-447d-46e5-88c6-_image.png"
+    },
+    {
+      "index": 5,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "3a4e9a8f-2356-4963-a5dc-764d70671dce",
+      "size_bytes": 33868,
+      "sha256": "cdb9d072816ab081e24d13439f33483d5861bfa663d2a708681f2daaca610967",
+      "path": "support/emails/email-01.extracted/parts/005_inline_3a4e9a8f-2356-4963-a5dc-_image.png"
+    },
+    {
+      "index": 6,
+      "content_type": "image/png",
+      "content_disposition": "inline",
+      "filename_header": "image.png",
+      "content_id": "8def1b99-3fdd-447e-a461-a547bf70ded6",
+      "size_bytes": 13977,
+      "sha256": "0cc55c5c6d4af500e0d25773a7e71312cb2c94ad9a427baba3b66627fd1e9afb",
+      "path": "support/emails/email-01.extracted/parts/006_inline_8def1b99-3fdd-447e-a461-_image.png"
+    },
+    {
+      "index": 7,
+      "content_type": "text/csv",
+      "content_disposition": "attachment",
+      "filename_header": "ls_by_basin.csv",
+      "content_id": null,
+      "size_bytes": 892574,
+      "sha256": "a216983e8d6d4a51213545f6a75dc4f6682aaca19346ed46d0afb7da6e0d2a75",
+      "path": "support/emails/email-01.extracted/parts/007_attachment_ls_by_basin.csv"
+    },
+    {
+      "index": 8,
+      "content_type": "text/csv",
+      "content_disposition": "attachment",
+      "filename_header": "wetwell.csv",
+      "content_id": null,
+      "size_bytes": 760768,
+      "sha256": "62e114600b8ef377cd940d34449339f2e003b87fa120d0cd07c0634394eb2a8d",
+      "path": "support/emails/email-01.extracted/parts/008_attachment_wetwell.csv"
+    }
+  ]
+}

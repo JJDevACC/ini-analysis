@@ -1,0 +1,491 @@
+{
+  "project_goal_hint": "Convert existing R code pipeline to Python with equivalent functionality and automation capability (future work).",
+  "source_scope": "Email context and artifacts extraction only; no code migration performed yet.",
+  "emails_included": [
+    "email-02.eml",
+    "email-03.eml",
+    "email-04.eml",
+    "email-05.eml",
+    "email-01.eml"
+  ],
+  "recommended_read_order": [
+    "email-02.eml",
+    "email-03.eml",
+    "email-04.eml",
+    "email-05.eml",
+    "email-01.eml"
+  ],
+  "email_records": [
+    {
+      "file": "support/emails/email-02.eml",
+      "filename": "email-02.eml",
+      "message_id": "<MW4PR09MB8931F156A680AF78632A04C9D266A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "in_reply_to": "<MW4PR09MB8931E411E6FF44230AAFFABDD266A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "references": [
+        "<MW4PR09MB893105C54447141A9C3D47E3D266A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931E411E6FF44230AAFFABDD266A@MW4PR09MB8931.namprd09.prod.outlook.com>"
+      ],
+      "date_header": "Fri, 06 Feb 2026 17:52:48 +0000",
+      "date_utc": "2026-02-06T17:52:48+00:00",
+      "date_sort": 1770400368.0,
+      "from": "\"Jones, Craig\" <jonedc@jea.com>",
+      "to": "\"Orr, Jim\" <orrjd@jea.com>",
+      "cc": null,
+      "subject": "Re: I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "subject_normalized": "I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "extracted_dir": "support/emails/email-02.extracted",
+      "manifest_path": "support/emails/email-02.extracted/manifest.json",
+      "plain_text_paths": [
+        "support/emails/email-02.extracted/parts/001_part_part-001.txt"
+      ],
+      "html_paths": [
+        "support/emails/email-02.extracted/parts/002_part_part-002.html"
+      ],
+      "attachments_count": 0,
+      "inline_images_count": 4,
+      "attachments": [],
+      "inline_images": [
+        {
+          "email": "email-02.eml",
+          "part_index": 3,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "4ec10a3e-08d9-4b66-badd-1d754b413dc0",
+          "size_bytes": 2002191,
+          "sha256": "b534849d44236ac813bfbc705ecce2fc6323b1747819ce64d7306c8923051c06",
+          "path": "support/emails/email-02.extracted/parts/003_inline_4ec10a3e-08d9-4b66-badd-_image.png"
+        },
+        {
+          "email": "email-02.eml",
+          "part_index": 4,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "Outlook-l1nqlstb.png",
+          "content_id": "6723c19d-fbd7-420e-8909-14d208b1db74",
+          "size_bytes": 51618,
+          "sha256": "7c31833afb0cd2a2a42ee9e9710a082b18fcc221103c3fd01a7365673f8f5a0c",
+          "path": "support/emails/email-02.extracted/parts/004_inline_6723c19d-fbd7-420e-8909-_Outlook-l1nqlstb.png"
+        },
+        {
+          "email": "email-02.eml",
+          "part_index": 5,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "Outlook-ojgvtvyd.png",
+          "content_id": "bc00bcf3-6a40-4733-8b73-de96692f67df",
+          "size_bytes": 9784,
+          "sha256": "1e4ceaad9c678889b916277b2c57026d9c8e13d9c8aeaca6c6ab883a7ea05ff2",
+          "path": "support/emails/email-02.extracted/parts/005_inline_bc00bcf3-6a40-4733-8b73-_Outlook-ojgvtvyd.png"
+        },
+        {
+          "email": "email-02.eml",
+          "part_index": 6,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "115a8f91-b606-4087-a173-cb1dc1d61204",
+          "size_bytes": 95195,
+          "sha256": "5c23d4cfaf8b3944430eaf27208a5a360c942c6fe64fa11f45002098619341de",
+          "path": "support/emails/email-02.extracted/parts/006_inline_115a8f91-b606-4087-a173-_image.png"
+        }
+      ],
+      "plain_body_sha256": "36a72ca8e9e1c491177c8f7470028ed646404673b028319ded8c69219ede4165",
+      "chronological_index": 1
+    },
+    {
+      "file": "support/emails/email-03.eml",
+      "filename": "email-03.eml",
+      "message_id": "<MW4PR09MB89318696B4D8F6D6B33B4B5BD266A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "in_reply_to": "<PH0PR09MB10669B97D14BC28AE3D40C95BBA66A@PH0PR09MB10669.namprd09.prod.outlook.com>",
+      "references": [
+        "<MW4PR09MB893105C54447141A9C3D47E3D266A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931E411E6FF44230AAFFABDD266A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931F156A680AF78632A04C9D266A@MW4PR09MB8931.namprd09.prod.outlook.com> <PH0PR09MB10669B97D14BC28AE3D40C95BBA66A@PH0PR09MB10669.namprd09.prod.outlook.com>"
+      ],
+      "date_header": "Fri, 06 Feb 2026 19:44:19 +0000",
+      "date_utc": "2026-02-06T19:44:19+00:00",
+      "date_sort": 1770407059.0,
+      "from": "\"Jones, Craig\" <jonedc@jea.com>",
+      "to": "\"Orr, Jim\" <orrjd@jea.com>",
+      "cc": null,
+      "subject": "Re: I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "subject_normalized": "I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "extracted_dir": "support/emails/email-03.extracted",
+      "manifest_path": "support/emails/email-03.extracted/manifest.json",
+      "plain_text_paths": [
+        "support/emails/email-03.extracted/parts/001_part_part-001.txt",
+        "support/emails/email-03.extracted/parts/009_part_part-009.txt"
+      ],
+      "html_paths": [
+        "support/emails/email-03.extracted/parts/002_part_part-002.html",
+        "support/emails/email-03.extracted/parts/010_part_A9339726709AC84AA6323EFC_part-010.html"
+      ],
+      "attachments_count": 2,
+      "inline_images_count": 7,
+      "attachments": [
+        {
+          "email": "email-03.eml",
+          "part_index": 12,
+          "content_type": "application/octet-stream",
+          "content_disposition": "attachment",
+          "filename_header": "BRA10477.csv",
+          "content_id": "9422C0208ABB734A91A25D0D2861651B@namprd09.prod.outlook.com",
+          "size_bytes": 128575,
+          "sha256": "bdb7746cc34c8eb75464c2f7b79186cdc1af495fb20fd0f2af8b26b25a009c69",
+          "path": "support/emails/email-03.extracted/parts/012_attachment_9422C0208ABB734A91A25D0D_BRA10477.csv"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 13,
+          "content_type": "application/octet-stream",
+          "content_disposition": "attachment",
+          "filename_header": "WES8617.csv",
+          "content_id": "CE13C0B23769164F96708544CCFC74E7@namprd09.prod.outlook.com",
+          "size_bytes": 128529,
+          "sha256": "debe2d8fc7e60abc9a16c5cc7df9015b9a4632a02063e03052e4a0967a1049f2",
+          "path": "support/emails/email-03.extracted/parts/013_attachment_CE13C0B23769164F96708544_WES8617.csv"
+        }
+      ],
+      "inline_images": [
+        {
+          "email": "email-03.eml",
+          "part_index": 3,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "4ec10a3e-08d9-4b66-badd-1d754b413dc0",
+          "size_bytes": 2002191,
+          "sha256": "b534849d44236ac813bfbc705ecce2fc6323b1747819ce64d7306c8923051c06",
+          "path": "support/emails/email-03.extracted/parts/003_inline_4ec10a3e-08d9-4b66-badd-_image.png"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 4,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "Outlook-l1nqlstb.png",
+          "content_id": "6723c19d-fbd7-420e-8909-14d208b1db74",
+          "size_bytes": 51618,
+          "sha256": "7c31833afb0cd2a2a42ee9e9710a082b18fcc221103c3fd01a7365673f8f5a0c",
+          "path": "support/emails/email-03.extracted/parts/004_inline_6723c19d-fbd7-420e-8909-_Outlook-l1nqlstb.png"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 5,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "Outlook-ojgvtvyd.png",
+          "content_id": "bc00bcf3-6a40-4733-8b73-de96692f67df",
+          "size_bytes": 9784,
+          "sha256": "1e4ceaad9c678889b916277b2c57026d9c8e13d9c8aeaca6c6ab883a7ea05ff2",
+          "path": "support/emails/email-03.extracted/parts/005_inline_bc00bcf3-6a40-4733-8b73-_Outlook-ojgvtvyd.png"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 6,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "115a8f91-b606-4087-a173-cb1dc1d61204",
+          "size_bytes": 95195,
+          "sha256": "5c23d4cfaf8b3944430eaf27208a5a360c942c6fe64fa11f45002098619341de",
+          "path": "support/emails/email-03.extracted/parts/006_inline_115a8f91-b606-4087-a173-_image.png"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 7,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "099e585c-a048-4898-95cc-43f4272c7767",
+          "size_bytes": 45041,
+          "sha256": "89398d1c6c8225544a78ba386a337d54aaf770bdd9034c5022186f94b20f7be6",
+          "path": "support/emails/email-03.extracted/parts/007_inline_099e585c-a048-4898-95cc-_image.png"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 8,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "e68d89d4-9c1a-441b-9df4-2fb245ff6f8d",
+          "size_bytes": 64279,
+          "sha256": "7410a8de7762fb9a6da5a4eef075e29165dbe3ad09e5ec8a9277acde6a9a842b",
+          "path": "support/emails/email-03.extracted/parts/008_inline_e68d89d4-9c1a-441b-9df4-_image.png"
+        },
+        {
+          "email": "email-03.eml",
+          "part_index": 11,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image001.png",
+          "content_id": "image001.png@01DB0851.F6FC61B0",
+          "size_bytes": 29916,
+          "sha256": "4990cc6164f9ae790171d41902f2f6f5b7badf8bcefe63c881ee9af60228d9df",
+          "path": "support/emails/email-03.extracted/parts/011_inline_image001.png_01DB0851.F6_image001.png"
+        }
+      ],
+      "plain_body_sha256": "3d2c028d9c82034ec3527bce9ae44f40255b76e16a14fdc38be31bd51f228619",
+      "chronological_index": 2
+    },
+    {
+      "file": "support/emails/email-04.eml",
+      "filename": "email-04.eml",
+      "message_id": "<MW4PR09MB8931D3E7ECB73407F2375B38D260A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "in_reply_to": "<MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "references": [
+        "<MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com>"
+      ],
+      "date_header": "Thu, 12 Feb 2026 14:40:09 +0000",
+      "date_utc": "2026-02-12T14:40:09+00:00",
+      "date_sort": 1770907209.0,
+      "from": "\"Jones, Craig\" <jonedc@jea.com>",
+      "to": "\"Orr, Jim\" <orrjd@jea.com>, \"Bedoya, Juan\" <bedojc@jea.com>, \"Schoettler, Kyle C.\" <schokc@jea.com>",
+      "cc": "\"Strickland, Matt J.\" <strimj@jea.com>, \"Nettles, Casey D.\" <nettad@jea.com>, \"Eaton, Michael T.\" <EatoMT@jea.com>",
+      "subject": "RE: I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "subject_normalized": "I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "extracted_dir": "support/emails/email-04.extracted",
+      "manifest_path": "support/emails/email-04.extracted/manifest.json",
+      "plain_text_paths": [
+        "support/emails/email-04.extracted/parts/001_part_part-001.txt"
+      ],
+      "html_paths": [
+        "support/emails/email-04.extracted/parts/002_part_part-002.html"
+      ],
+      "attachments_count": 1,
+      "inline_images_count": 0,
+      "attachments": [
+        {
+          "email": "email-04.eml",
+          "part_index": 3,
+          "content_type": "application/octet-stream",
+          "content_disposition": "attachment",
+          "filename_header": "README.md",
+          "content_id": null,
+          "size_bytes": 3985,
+          "sha256": "d61fb817890ef18f835128ad7c0271218caa5c40188dea197ec248d3b794827c",
+          "path": "support/emails/email-04.extracted/parts/003_attachment_README.md"
+        }
+      ],
+      "inline_images": [],
+      "plain_body_sha256": "cf3b9f60c55a891778ee84d6631fa3864bf70f3a3e3f9b622a49c08ebacb9179",
+      "chronological_index": 3
+    },
+    {
+      "file": "support/emails/email-05.eml",
+      "filename": "email-05.eml",
+      "message_id": "<MW4PR09MB893174047D1B0808F2D6B150D268A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "in_reply_to": "<PH0PR09MB10669994084E2FF0176FE4C47BA60A@PH0PR09MB10669.namprd09.prod.outlook.com>",
+      "references": [
+        "<MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931D3E7ECB73407F2375B38D260A@MW4PR09MB8931.namprd09.prod.outlook.com> <PH0PR09MB10669994084E2FF0176FE4C47BA60A@PH0PR09MB10669.namprd09.prod.outlook.com>"
+      ],
+      "date_header": "Fri, 20 Feb 2026 03:19:16 +0000",
+      "date_utc": "2026-02-20T03:19:16+00:00",
+      "date_sort": 1771557556.0,
+      "from": "\"Jones, Craig\" <jonedc@jea.com>",
+      "to": "\"Orr, Jim\" <orrjd@jea.com>, \"Bedoya, Juan\" <bedojc@jea.com>, \"Schoettler, Kyle C.\" <schokc@jea.com>",
+      "cc": "\"Strickland, Matt J.\" <strimj@jea.com>, \"Nettles, Casey D.\" <nettad@jea.com>, \"Eaton, Michael T.\" <EatoMT@jea.com>",
+      "subject": "Re: I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "subject_normalized": "I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "extracted_dir": "support/emails/email-05.extracted",
+      "manifest_path": "support/emails/email-05.extracted/manifest.json",
+      "plain_text_paths": [
+        "support/emails/email-05.extracted/parts/001_part_part-001.txt"
+      ],
+      "html_paths": [
+        "support/emails/email-05.extracted/parts/002_part_part-002.html",
+        "support/emails/email-05.extracted/parts/004_attachment_package_structure.html"
+      ],
+      "attachments_count": 5,
+      "inline_images_count": 1,
+      "attachments": [
+        {
+          "email": "email-05.eml",
+          "part_index": 4,
+          "content_type": "text/html",
+          "content_disposition": "attachment",
+          "filename_header": "package_structure.html",
+          "content_id": null,
+          "size_bytes": 10105,
+          "sha256": "dfe6cd94e331008c10051638a64c197a16bddef3c8a787d88ecb24c952072c30",
+          "path": "support/emails/email-05.extracted/parts/004_attachment_package_structure.html"
+        },
+        {
+          "email": "email-05.eml",
+          "part_index": 5,
+          "content_type": "text/csv",
+          "content_disposition": "attachment",
+          "filename_header": "pi_tag_master_list.csv",
+          "content_id": null,
+          "size_bytes": 95423,
+          "sha256": "933f3c1b5075b8c8cc694e0c5d72b54ffb0c437a52110a3d50904c09491f6825",
+          "path": "support/emails/email-05.extracted/parts/005_attachment_pi_tag_master_list.csv"
+        },
+        {
+          "email": "email-05.eml",
+          "part_index": 6,
+          "content_type": "text/csv",
+          "content_disposition": "attachment",
+          "filename_header": "pi_af_loader.csv",
+          "content_id": null,
+          "size_bytes": 897334,
+          "sha256": "15a588b9f0fa4e9fd8814d4bb6539a70a4416ed5d61f77cf902b9f590bf804c0",
+          "path": "support/emails/email-05.extracted/parts/006_attachment_pi_af_loader.csv"
+        },
+        {
+          "email": "email-05.eml",
+          "part_index": 7,
+          "content_type": "text/csv",
+          "content_disposition": "attachment",
+          "filename_header": "pi_af_import.csv",
+          "content_id": null,
+          "size_bytes": 117184,
+          "sha256": "648ff2dd89ff22e8d30ed4a4e2eadfb2c5c999850ca4b51f19394da883b02228",
+          "path": "support/emails/email-05.extracted/parts/007_attachment_pi_af_import.csv"
+        },
+        {
+          "email": "email-05.eml",
+          "part_index": 8,
+          "content_type": "application/x-zip-compressed",
+          "content_disposition": "attachment",
+          "filename_header": "R.zip",
+          "content_id": null,
+          "size_bytes": 181045,
+          "sha256": "4c597ab64cc4699776ed6a6f1ffd69cdea61266ae05b805118e48421625e8666",
+          "path": "support/emails/email-05.extracted/parts/008_attachment_R.zip"
+        }
+      ],
+      "inline_images": [
+        {
+          "email": "email-05.eml",
+          "part_index": 3,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "149eb06f-7483-4202-8672-983f7320ff06",
+          "size_bytes": 11891,
+          "sha256": "90dd8459de86e53ee329a5218963a71b86a8b182fc7ea3bcd18a36f61de495f4",
+          "path": "support/emails/email-05.extracted/parts/003_inline_149eb06f-7483-4202-8672-_image.png"
+        }
+      ],
+      "plain_body_sha256": "0faae9edcdad4c3390c4137c6bc1ccff24b04505336ede8b21419d7450824af5",
+      "chronological_index": 4
+    },
+    {
+      "file": "support/emails/email-01.eml",
+      "filename": "email-01.eml",
+      "message_id": "<MW4PR09MB89319D44DA3A34AF0DD0A252D277A@MW4PR09MB8931.namprd09.prod.outlook.com>",
+      "in_reply_to": "<PH0PR09MB10669C7DB8585ED6526961C73BA77A@PH0PR09MB10669.namprd09.prod.outlook.com>",
+      "references": [
+        "<MW4PR09MB8931024D27DC0C2FA523B725D266A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931D3E7ECB73407F2375B38D260A@MW4PR09MB8931.namprd09.prod.outlook.com> <PH0PR09MB10669994084E2FF0176FE4C47BA60A@PH0PR09MB10669.namprd09.prod.outlook.com> <MW4PR09MB893174047D1B0808F2D6B150D268A@MW4PR09MB8931.namprd09.prod.outlook.com> <MW4PR09MB8931B50A1A4B10F0237D3B57D268A@MW4PR09MB8931.namprd09.prod.outlook.com> <PH0PR09MB1066990FA65102A0C16F78023BA68A@PH0PR09MB10669.namprd09.prod.outlook.com> <PH0PR09MB10669C7DB8585ED6526961C73BA77A@PH0PR09MB10669.namprd09.prod.outlook.com>"
+      ],
+      "date_header": "Mon, 23 Feb 2026 14:14:26 +0000",
+      "date_utc": "2026-02-23T14:14:26+00:00",
+      "date_sort": 1771856066.0,
+      "from": "\"Jones, Craig\" <jonedc@jea.com>",
+      "to": "\"Orr, Jim\" <orrjd@jea.com>",
+      "cc": null,
+      "subject": "Re: I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "subject_normalized": "I&I Use-Case Scoping \u2013 PI Vision / PI Datalink",
+      "extracted_dir": "support/emails/email-01.extracted",
+      "manifest_path": "support/emails/email-01.extracted/manifest.json",
+      "plain_text_paths": [
+        "support/emails/email-01.extracted/parts/001_part_part-001.txt"
+      ],
+      "html_paths": [
+        "support/emails/email-01.extracted/parts/002_part_part-002.html"
+      ],
+      "attachments_count": 2,
+      "inline_images_count": 4,
+      "attachments": [
+        {
+          "email": "email-01.eml",
+          "part_index": 7,
+          "content_type": "text/csv",
+          "content_disposition": "attachment",
+          "filename_header": "ls_by_basin.csv",
+          "content_id": null,
+          "size_bytes": 892574,
+          "sha256": "a216983e8d6d4a51213545f6a75dc4f6682aaca19346ed46d0afb7da6e0d2a75",
+          "path": "support/emails/email-01.extracted/parts/007_attachment_ls_by_basin.csv"
+        },
+        {
+          "email": "email-01.eml",
+          "part_index": 8,
+          "content_type": "text/csv",
+          "content_disposition": "attachment",
+          "filename_header": "wetwell.csv",
+          "content_id": null,
+          "size_bytes": 760768,
+          "sha256": "62e114600b8ef377cd940d34449339f2e003b87fa120d0cd07c0634394eb2a8d",
+          "path": "support/emails/email-01.extracted/parts/008_attachment_wetwell.csv"
+        }
+      ],
+      "inline_images": [
+        {
+          "email": "email-01.eml",
+          "part_index": 3,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "149eb06f-7483-4202-8672-983f7320ff06",
+          "size_bytes": 11891,
+          "sha256": "90dd8459de86e53ee329a5218963a71b86a8b182fc7ea3bcd18a36f61de495f4",
+          "path": "support/emails/email-01.extracted/parts/003_inline_149eb06f-7483-4202-8672-_image.png"
+        },
+        {
+          "email": "email-01.eml",
+          "part_index": 4,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "bd4e1d4d-447d-46e5-88c6-a7ed0ee4c421",
+          "size_bytes": 20415,
+          "sha256": "96dadfd62b620a1885cf311582293fdad1f5c5c53042ec7fb0674e7bd952a0d0",
+          "path": "support/emails/email-01.extracted/parts/004_inline_bd4e1d4d-447d-46e5-88c6-_image.png"
+        },
+        {
+          "email": "email-01.eml",
+          "part_index": 5,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "3a4e9a8f-2356-4963-a5dc-764d70671dce",
+          "size_bytes": 33868,
+          "sha256": "cdb9d072816ab081e24d13439f33483d5861bfa663d2a708681f2daaca610967",
+          "path": "support/emails/email-01.extracted/parts/005_inline_3a4e9a8f-2356-4963-a5dc-_image.png"
+        },
+        {
+          "email": "email-01.eml",
+          "part_index": 6,
+          "content_type": "image/png",
+          "content_disposition": "inline",
+          "filename_header": "image.png",
+          "content_id": "8def1b99-3fdd-447e-a461-a547bf70ded6",
+          "size_bytes": 13977,
+          "sha256": "0cc55c5c6d4af500e0d25773a7e71312cb2c94ad9a427baba3b66627fd1e9afb",
+          "path": "support/emails/email-01.extracted/parts/006_inline_8def1b99-3fdd-447e-a461-_image.png"
+        }
+      ],
+      "plain_body_sha256": "653930320bfc4f4082620137374ce1dad931630be150358801c0719e09dde647",
+      "chronological_index": 5
+    }
+  ],
+  "overlap_signals": {
+    "duplicate_message_ids": {},
+    "duplicate_plain_bodies": {},
+    "subject_groups": {
+      "I&I Use-Case Scoping \u2013 PI Vision / PI Datalink": [
+        "email-01.eml",
+        "email-02.eml",
+        "email-03.eml",
+        "email-04.eml",
+        "email-05.eml"
+      ]
+    }
+  },
+  "all_parts_count": 38,
+  "generated_files": {
+    "context_index_json": "support/emails/_context_bundle/context-index.json",
+    "chronology_csv": "support/emails/_context_bundle/chronology.csv",
+    "next_chat_brief_md": "support/emails/_context_bundle/NEXT_CHAT_BRIEF.md"
+  }
+}

@@ -1,0 +1,4 @@
+# file: C:\repository\local\ini-analysis\data-to-sliicer\pi_client.py
+# hypothesis_version: 6.151.12
+
+[500, '1m', 'Items', 'Name', 'PIWEBAPI_PASS', 'PIWEBAPI_URL', 'PIWEBAPI_USER', 'PIWEBAPI_VERIFY_TLS', 'Timestamp', 'Value', 'WebId', 'endTime', 'interval', 'startTime', 'webId']

@@ -1,0 +1,5 @@
+# Test output files
+output/
+
+# Environment variables (contains credentials)
+.env

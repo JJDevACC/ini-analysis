@@ -1,0 +1,66 @@
+[External Email - Exercise caution. DO NOT open attachments or click links from unknown senders or unexpected email.]
+
+Craig:
+
+Nice to speak with you earlier today.  Attached is the format I used for the last import.  Note that the file must be a .csv file.
+
+Leave the first three rows alone for an existing location.  You will notice the Location Name is in Cell A1.
+
+Data starts on Row 4.  Column A is the date/time.  Column B is QFINAL.  Column C is QCONTINUITY.  Column D = QUANTITY.
+
+Yes, all three data entities are the exact same number.
+
+Convert your GPM units to MGD units.
+
+Note:  the date/time stamp format is CRITICAL.  If this format is not correct, the import will not work.  The correct format is MM/DD/YYYY hh:mm:ss AM/PM
+
+Once you have the .csv file formatted for import, you are ready to go to PRISM.  Follow these steps:
+
+  1.  Go to the black toolbar in PRISM and go to the VAULT.
+  2.  Once in the VAULT, look just below the bottom right of the black toolbar, and you will see UPLOAD.  Select UPLOAD.
+  3.  From the list, select “Data”.
+  4.  An UPLOAD DATA Dialog box will pop.  Navigate to and select the import file.
+  5.  If the Location already exists in PRISM (it does for these two pump stations), and if the .csv file is formatted correctly, you will see this dialog box display:
+
+
+  6.  Select IMPORT and the data should be pulled into PRISM.
+  7.  Now you can go back to SLiiCER and either create a new Study or change the end date on an existing Study.
+
+Let me know if you have any questions, or if you run into any problems.
+
+Thanks,
+Kevin
+
+
+From: Jones, D. Craig <jonedc@jea.com>
+Sent: Monday, September 16, 2024 3:26 PM
+To: Enfinger, Kevin <KEnfinger@idexcorp.com>
+Subject: RE: SLiiCER Discussion for JEA
+
+Thanks for taking the time to meet with me today on Sliicer. Do you have the procedure for uploading flows into Prism? D. Craig Jones, PE Water/Wastewater System Planning Specialist Direct: (904) 727-8762 -----Original Appointment----- From: 
+
+Thanks for taking the time to meet with me today on Sliicer.
+
+Do you have the procedure for uploading flows into Prism?
+
+D. Craig Jones, PE
+
+Water/Wastewater System Planning Specialist
+
+Direct: (904) 727-8762
+
+-----Original Appointment-----
+From: Jones, D. Craig
+Sent: Monday, September 16, 2024 12:32 PM
+To: Enfinger, Kevin
+Subject: Accepted: SLiiCER Discussion for JEA
+When: Monday, September 16, 2024 1:00 PM-2:00 PM (UTC-06:00) Central Time (US & Canada).
+Where: Microsoft Teams Meeting
+
+
+
+*****
+This e-mail is intended solely for the intended recipient or recipients. If this e-mail is addressed to you in error or you otherwise receive this e-mail in error, please advise LFOPrivacy@idexcorp.com as well as the sender, do not read, print, forward or save this e-mail, and promptly delete and destroy all copies of this e-mail. If you would like additional information regarding how your data is collected, used and/or disclosed by IDEX or its business units please consult the IDEX Business Contact Privacy Notice https://www.idexcorp.com/business-contact-privacy-notice/<https://urldefense.com/v3/__https://www.idexcorp.com/business-contact-privacy-notice/__;!!PTbBrQ!epZZuUQDQVrjp9Dc4Y2RckZsI-aaryeLgd3fhhSTmBw8A5cQSL_TH9xqQe4G_yzo4EjYMUbVxXtz3LYj$> .
+This email may contain information that is confidential, proprietary or secret and should be treated as confidential by all recipients. This e-mail may also be a confidential attorney-client communication, contain attorney work product, or otherwise be privileged and exempt from disclosure. If there is a confidentiality or non-disclosure agreement or protective order covering any information contained in this e-mail, such information shall be treated as confidential and subject to restriction on disclosure and use in accordance with such agreement or order, and this notice shall constitute identification, labeling or marking of such information as confidential, proprietary or secret in accordance with such agreement or order.
+The term 'this e-mail' includes any and all attachments.
+*****

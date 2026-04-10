@@ -1,0 +1,398 @@
+Zipped R files are attached with README on structure.
+
+The pipeline has three steps, each with an output:
+Validate_gis()
+
+  *
+pulls tags currently in GIS
+  *
+checks if they are still valid,
+  *
+Tries to guess the invalid tag names
+  *
+export is a CSV file
+for manual check and
+pass to Kirk to update GIS
+
+
+Build_af()
+
+  *
+Checks if tags exist for
+P1, P2, P3, P4 + RUN, FRQ, RSPD, CSPD
+  *
+If tag does exist, pull 7 days of SCADA history to confirm data is valid
+  *
+Remove VFD and >3 pumps
+  *
+Get Plant Basin for each station from GIS
+  *
+Get Wetwell diameter from EAM or PI AF
+  *
+Export to CSV file for manual check
+
+
+Export_af()
+
+  *
+Check if station is LEADSP or LEAD
+  *
+Parse into PI Builder friendly format
+  *
+Export CSV to upload into AF
+
+[cid:149eb06f-7483-4202-8672-983f7320ff06]
+
+The output files for each is attached.
+
+  *
+Validate_gis() = pi_tag_master_list.csv
+  *
+Build_af() = pi_af_import.csv
+  *
+Export_af() = Pi_af_loader.csv
+
+I no longer have access to the Pi Builder Excel add-on, but the pi_af_loader.csv file should work to refresh AF
+
+
+
+D. Craig Jones, PE
+
+Manager - W/WW Modeling & Analysis
+
+Direct: (904) 727-8762
+
+
+
+________________________________
+From: Orr, Jim <orrjd@jea.com>
+Sent: Thursday, February 12, 2026 11:24 AM
+To: Jones, Craig <jonedc@jea.com>; Bedoya, Juan <bedojc@jea.com>; Schoettler, Kyle C. <schokc@jea.com>
+Cc: Strickland, Matt J. <strimj@jea.com>; Nettles, Casey D. <nettad@jea.com>; Eaton, Michael T. <EatoMT@jea.com>
+Subject: Re: I&I Use-Case Scoping – PI Vision / PI Datalink
+
+Thank you, everyone, for taking the time to meet yesterday.
+
+Craig - thanks.  Will you provide the source code for any/all of these workflows so I can review and reverse engineer.
+
+Below are my notes from the meeting.  Please let me know if there are any corrections needed, or if I missed anything.
+
+---
+
+Additional Information Needed:
+- Source code:  R code that gets data from GIS and populates elements/attributes in PI Asset Framework. (Craig)
+- Source code:  Script that uses PI Web API to create the CSV file that is currently uploaded manually into ADS Prism. (Craig)
+- Write up from Craig on the PI Vision performance issue. (Craig)
+- Spreadsheet that designates which lift stations are Class 1, 2, 3, and 4 that also corresponds to the elements in PI AF. (Juan/Casey)
+
+
+## PI Vision Example
+- Use hollybrook pump station as an example for a PI Vision screen.
+      - Hollybrook has a flow meter that sends data to ADS Prism.
+
+## PI Datalink Example
+- Use hollybrook pump station as an example.
+
+## PI Vision Performance Issue
+- Craig has a write up on it.
+- PI Vision is taking a long time to show a graph but using PI Web API is much quicker.
+- Hypothesis: The data is being output as an AF Analysis instead of to a PI Point.  Therefore, generating a view of the history of data may take longer because it has to calculate all those analysis each time, as opposed to getting the data history from a PI Point.
+
+## CSV File Uploading into ADS Sliicer
+- Craig has script that generates this CSV file
+- This data is the calculated flow from the Class 1, 2, and 3 lift stations that needs to be deducted from the class 4 lift stations.
+- ADS Prism API has an endpoint that we can POST to, to directly insert the data.
+
+## TRITON Device Flow Data from ADS to PI
+- Devices have been/are being installed to measure flow to class 4 lift stations with variable speed pumps.  Need to get this data from ADS Prism into PI similar to the ECHO device data that we are moving.
+
+## Juan's Question on Consultant use of PI Datalink
+- Yes, the consultants would need to be issued a JEA 4+2 account.
+- Once issued a 4+2 they can put in a PC support ticket to have Datalink installed, if they're using a JEA virtual machine or have a JEA laptop.
+
+  *
+Alternatively, we are looking into have an icon added in Citrix for Excel with datalink pre-installed.  I can provide an update when I get more info on this implementation.
+
+
+Thanks,
+
+
+
+
+
+Jim Orr, P.E.
+
+Mobile: (904) 524-5094
+
+
+
+________________________________
+From: Jones, Craig <jonedc@jea.com>
+Sent: Thursday, February 12, 2026 9:40 AM
+To: Orr, Jim <orrjd@jea.com>; Bedoya, Juan <bedojc@jea.com>; Schoettler, Kyle C. <schokc@jea.com>
+Cc: Strickland, Matt J. <strimj@jea.com>; Nettles, Casey D. <nettad@jea.com>; Eaton, Michael T. <EatoMT@jea.com>
+Subject: RE: I&I Use-Case Scoping – PI Vision / PI Datalink
+
+
+Thanks for meeting with us yesterday.
+
+
+
+Attached is the README in Markdown for the PI Asset Framework tag loader script.
+
+
+
+________________________________
+
+
+
+Step 1: Build PI Tags from GIS
+
+
+
+1.1) Get list of tags from GIS
+
+Downloads pump station features from GWPR, filters to in-service lift stations with a CMMS asset ID.
+
+
+
+get_ls_from_gis <- function() {
+
+    load_gis_ps() %>%
+
+    st_drop_geometry() %>%                  # remove x,y
+
+    filter(FAC_STATE == "INS") %>%          # In-Service Only
+
+    filter(!is.na(CMMS_ASSET_ID)) %>%       # Has CMMS_ASSET_ID
+
+    filter(SUBTYPE == 1) %>%                # is a Liftstation
+
+    dplyr::select(STREET_NAME, STREET_NUMBER, CMMS_ASSET_ID, PI_TAG)
+
+}
+
+
+
+1.2) Classify and validate tags
+
+classify_tags() splits tags into categories and checks each against the PI Web API. print_tag_summary() displays the results as a tree.
+
+
+
+                   levelName matches     pct
+
+1 GWPR/Sewer_Dataset/Station    1696
+
+2  |--Missing Data (NA)           17    (1%)
+
+3  |--Missing Underscore        1674
+
+4  |   |--Bad Tag                 20  (1.2%)
+
+5  |   °--Valid Otherwise       1654 (97.5%)
+
+6  |--Correct Format               0
+
+7  |   |--Bad Tag                  0    (0%)
+
+8  |   °--OK                       0    (0%)
+
+9  °--No SCADA                     5  (0.3%)
+
+
+
+1.3) Try to guess correct tag names
+
+For tags that are missing or invalid, guess_tag_name() builds candidate tag names from the street name and address, then checks each against the PI Web API.
+
+
+
+Candidate format: {site}:{grid}:{first 3 chars of street}{address}_{measurement}.
+
+·         {site} = wwl, for liftstations
+
+·         {grid} = north, east, south, west, nassau, stjohns
+
+·         {first 3 chars of street}{address}, see guess.R
+
+·         {measurement} = used _P1RUN because it is common to all liftstations.
+
+
+
+Suffixes tried:
+
+·         "" (standard station)
+
+·         "B" (booster pump)
+
+·         "-1" (new station placeholder)
+
+
+
+Stops at the first valid match per asset to minimize API calls.
+
+
+
+1.4) Export
+
+The corrected tags are joined back with the original GIS data and exported to data/pi_tag_master_list.csv. Duplicate CMMS_ASSET_IDs and PI_TAGs are printed as warnings for manual review.
+
+
+
+________________________________
+
+Step 2: Check Pump Tags and Build AF Import Data
+
+
+
+2.1) Check all pump tags
+
+check_all_pump_tags() generates 16 tag candidates per station (4 pumps x 4 measurements: RUN, FRQ, RSPD, CSPD) and validates each against the PI Web API.
+
+
+
+2.2) Identify multi-pump and VFD stations
+
+get_scada_history() pulls 7 days of SCADA history for valid tags (excluding P1RUN/P2RUN).
+
+check_multiple_pumps_or_vfd_control() analyzes the history to identify stations with more than 2 pumps or VFD speed control. Stations with >2 pumps are excluded from the standard template flow.
+
+
+
+2.3) Check lead setpoint tags
+
+For remaining stations, checks if a _WLLEADSP tag exists. Stations with a lead setpoint get the _cte_leadsp template; those without get _cte_lead.
+
+
+
+2.4) Join reference data and export
+
+Joins with plant basin assignments (get_ls_by_plant()) and wetwell diameter data (get_dia_by_ls()). These are currently loaded from RData files but are placeholder functions intended to be replaced with computed lookups.
+
+Exports to data/pi_af_import.csv with columns: BASIN, STATION_NAME, CMMS_ASSET_ID, PI_TAG, Dia, TEMPLATE
+
+________________________________
+
+
+
+Step 3: Format for PI AF CSV Loader
+
+update_pi_af_format() reads data/pi_af_import.csv and builds the hierarchical CSV structure required by the PI Asset Framework bulk import tool.
+
+
+
+Output hierarchy:
+
+WASTEWATER
+
+  └── EST FLOW
+
+        └── {BASIN}
+
+              └── {STATION_NAME}  (Template: _Liftstation)
+
+                    ├── CMMS Asset ID  (Attribute)
+
+                    ├── PI Tag         (Attribute)
+
+                    ├── Wetwell Area   (Attribute)
+
+                    ├── cte            (Element, template varies)
+
+                    └── hrt            (Element, template: _hrt)
+
+
+
+Exports to out/pi_af_loader.csv.
+
+
+
+
+
+D. Craig Jones, PE
+
+Manager - W/WW Modeling & Analysis
+
+Direct: (904) 727-8762
+
+
+
+-----Original Appointment-----
+From: Orr, Jim <orrjd@jea.com>
+Sent: Friday, February 6, 2026 10:13 AM
+To: Orr, Jim; Orr, Jim; Bedoya, Juan; Schoettler, Kyle C.; Jones, Craig
+Cc: Strickland, Matt J.; Nettles, Casey D.; Eaton, Michael T.
+Subject: I&I Use-Case Scoping – PI Vision / PI Datalink
+When: Wednesday, February 11, 2026 9:00 AM-10:00 AM (UTC-05:00) Eastern Time (US & Canada).
+Where: Pearl Street (onsite – Office/Meeting room TBD)
+
+
+
+Hi Team,
+
+The purpose of this meeting is to align on the I&I analysis use-case and understand goals, data needs, and how PI tools are being used, in order to appropriately scope support and training.
+
+Location:
+Pearl Street (onsite – Office/Meeting room TBD)
+Microsoft Teams link included as an option
+
+Proposed agenda:
+
+  *   Overview of the I&I use-case and desired outcomes
+
+  *   How PI Vision and PI Datalink are being used (or planned to be used)
+
+  *   Source data involved (tags, measurements, time ranges)
+
+  *   Calculated values currently relied on and where those calculations live
+
+  *   Use of the ADS Sliicer application and how it fits into the workflow
+
+  *   Next steps for scoping and training support
+
+
+
+Thanks,
+
+Jim
+
+
+
+
+
+________________________________________________________________________________
+
+Microsoft Teams meeting
+
+Join: https://teams.microsoft.com/meet/22549038732823?p=WseeLwU2qZm2moAXHH
+
+Meeting ID: 225 490 387 328 23
+
+Passcode: rB7ie7n4
+
+________________________________
+
+Need help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi%40thread.v2/0?context=%7b%22Tid%22%3a%22c0d91960-576d-4631-bc37-56584b7dc8db%22%2c%22Oid%22%3a%22b116b979-ae3a-4c7a-bac3-7f38a541a2a2%22%7d>
+
+Dial in by phone
+
++1 469-208-1810,,351893839#<tel:+14692081810,,351893839> United States, Carrollton
+
+Find a local number<https://dialin.teams.microsoft.com/7f16dcab-d946-4f6a-8038-ba775494cd86?id=351893839>
+
+Phone conference ID: 351 893 839#
+
+Join on a video conferencing device
+
+Tenant key: jea@m.webex.com<mailto:jea@m.webex.com>
+
+Video ID: 117 295 823 1
+
+More info<https://www.webex.com/msteams?confid=1172958231&tenantkey=jea&domain=m.webex.com>
+
+For organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=b116b979-ae3a-4c7a-bac3-7f38a541a2a2&tenantId=c0d91960-576d-4631-bc37-56584b7dc8db&threadId=19_meeting_YmNhN2IzMjMtMGI5NC00NTM1LTg2MWQtNzJjOGNkYjFjOGZi@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>
+
+Teams retains all content to comply with State of Florida public records laws. All chat messages, documents, and recordings are retained. Do not put sensitive or confidential information in chat.
+
+________________________________________________________________________________

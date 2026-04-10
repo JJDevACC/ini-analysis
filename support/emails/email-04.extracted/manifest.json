@@ -1,0 +1,37 @@
+{
+  "source_eml": "support/emails/email-04.eml",
+  "output_dir": "support/emails/email-04.extracted",
+  "headers_file": "support/emails/email-04.extracted/headers.txt",
+  "parts": [
+    {
+      "index": 1,
+      "content_type": "text/plain",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 7066,
+      "sha256": "cf3b9f60c55a891778ee84d6631fa3864bf70f3a3e3f9b622a49c08ebacb9179",
+      "path": "support/emails/email-04.extracted/parts/001_part_part-001.txt"
+    },
+    {
+      "index": 2,
+      "content_type": "text/html",
+      "content_disposition": "none",
+      "filename_header": null,
+      "content_id": null,
+      "size_bytes": 36436,
+      "sha256": "f1153d38957b76c65269e304a04429f00206c87affcb0f8598180b447a9ba23e",
+      "path": "support/emails/email-04.extracted/parts/002_part_part-002.html"
+    },
+    {
+      "index": 3,
+      "content_type": "application/octet-stream",
+      "content_disposition": "attachment",
+      "filename_header": "README.md",
+      "content_id": null,
+      "size_bytes": 3985,
+      "sha256": "d61fb817890ef18f835128ad7c0271218caa5c40188dea197ec248d3b794827c",
+      "path": "support/emails/email-04.extracted/parts/003_attachment_README.md"
+    }
+  ]
+}
