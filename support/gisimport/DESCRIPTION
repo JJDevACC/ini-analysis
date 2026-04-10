@@ -1,0 +1,16 @@
+Package: gisimport
+Type: Package
+Title: Read Shapefiles from Enterprise Sources into R (gisimport)
+Version: 0.1.0
+Author: D Craig Jones, PE <JoneDC@JEA.com>
+Maintainer: D Craig Jones, PE <JoneDC@JEA.com>
+Description: a loader to read shapefiles into R from various sources within the enterprise.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    magrittr,
+    sf,
+    units
+RoxygenNote: 7.2.3
