@@ -1,7 +1,7 @@
 """PI Web API client module.
 
 Handles authentication and communication with the AVEVA PI Web API server
-using NTLM auth. Credentials are passed in from the caller (loaded from
+using Basic auth. Credentials are passed in from the caller (loaded from
 .env by main.py).
 """
 
@@ -10,7 +10,6 @@ import urllib3
 from datetime import datetime
 
 import requests
-from requests_ntlm import HttpNtlmAuth
 
 try:
     from dateutil.parser import isoparse as _isoparse
@@ -29,12 +28,12 @@ def create_session(
     password: str,
     verify_tls: bool,
 ) -> requests.Session:
-    """Create a requests Session pre-configured with NTLM authentication.
+    """Create a requests Session pre-configured with Basic authentication.
 
     Args:
         url: Base URL for PI Web API (e.g. https://host/piwebapi).
-        user: NTLM username (DOMAIN\\user).
-        password: NTLM password.
+        user: Username for Basic auth.
+        password: Password for Basic auth.
         verify_tls: Whether to verify TLS certificates.
 
     Returns:
@@ -60,7 +59,7 @@ def create_session(
         )
 
     session = requests.Session()
-    session.auth = HttpNtlmAuth(user, password)
+    session.auth = (user, password)
     session.verify = verify_tls
 
     if not verify_tls:
