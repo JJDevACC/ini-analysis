@@ -12,6 +12,41 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
+# Unit conversion factors: multiply raw value by this factor
+UNIT_CONVERSIONS = {
+    "none": 1.0,
+    "gpm-to-mgd": 1440.0 / 1_000_000.0,  # gallons/min → million gallons/day
+}
+
+
+def convert_values(
+    data: list[tuple[datetime, float]],
+    conversion: str = "none",
+) -> list[tuple[datetime, float]]:
+    """Apply a unit conversion factor to all values in the data.
+
+    Args:
+        data: List of (timestamp, value) pairs.
+        conversion: Conversion key from UNIT_CONVERSIONS (default: ``"none"``).
+
+    Returns:
+        New list with converted values.
+
+    Raises:
+        ValueError: If *conversion* is not a recognized key.
+    """
+    if conversion not in UNIT_CONVERSIONS:
+        valid = ", ".join(sorted(UNIT_CONVERSIONS.keys()))
+        raise ValueError(
+            f"Unknown unit conversion '{conversion}'. Valid options: {valid}"
+        )
+
+    factor = UNIT_CONVERSIONS[conversion]
+    if factor == 1.0:
+        return data
+
+    return [(ts, val * factor) for ts, val in data]
+
 
 def derive_site_id(tag_name: str) -> str:
     """Extract the site ID from a PI Point tag name.

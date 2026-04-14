@@ -9,3 +9,6 @@ Here are responses to your questions:
 4.  I do not know the answer to this question, but I noticed that as well.  For now, let's assume that all three columns will always be the same value.  Add this to the "ai-questions.md" file for us to inquire about later on.
 5.  I have an API key that we should be able to use when we get to that point.  The endpoint from the swagger spec that I believe we would use is POST to /api/Telemtry.  However, this hasn't been confirmed.  Let's worry more about this section as we move through the project.  
 6.  Yes, the .venv folder that is in this project is what we should use.  It has Python 3.12 and other libraries already installed.
+
+### 2026-04-13 Prompt about finding the difference between the two API Calls.
+I think it would be helpful to map out the original, exact, REST API Calls that both Craig's R code and our Python code makes so that I can check if the API endpoint that's used is the same in both cases, and determine if some of the R code client side manipulation that Craig did is what's causing the difference in the flow values.  For example, the idea is that if the R code and our Python code make the same API call 

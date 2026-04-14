@@ -58,6 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="Summary calculation type: Average, Minimum, Maximum, Total, etc. (default: Average)",
     )
     parser.add_argument(
+        "--units",
+        default="gpm-to-mgd",
+        help="Unit conversion to apply: none, gpm-to-mgd (default: gpm-to-mgd)",
+    )
+    parser.add_argument(
         "--output",
         default=None,
         help="Output CSV file path (default: {site_id}.csv)",
@@ -130,7 +135,11 @@ def run_pipeline(args: argparse.Namespace) -> None:
 
     logger.info("Retrieved %d data rows.", len(rows))
 
-    # Step 5: Derive site ID and determine output path
+    # Step 5: Apply unit conversion
+    logger.info("Applying unit conversion: %s", args.units)
+    rows = csv_formatter.convert_values(rows, args.units)
+
+    # Step 6: Derive site ID and determine output path
     site_id = csv_formatter.derive_site_id(args.tag)
     output_path = args.output or f"{site_id}.csv"
     logger.info("Site ID: %s", site_id)

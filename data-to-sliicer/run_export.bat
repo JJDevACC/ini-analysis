@@ -18,11 +18,12 @@ REM   15m - every 15 minutes
 REM ============================================================
 
 set TAG=wwl:south:wes8617b_realtmmetflo
-set START=*-5d
-set END=*
+set START=2024-06-12
+set END=2024-09-10
 set METHOD=summary
 set INTERVAL=1h
 set SUMMARY_TYPE=Average
+set UNITS=gpm-to-mgd
 set OUTPUT=
 
 echo Running PI to Sliicer export...
@@ -32,13 +33,14 @@ echo End:          %END%
 echo Method:       %METHOD%
 echo Interval:     %INTERVAL%
 echo Summary Type: %SUMMARY_TYPE%
+echo Units:        %UNITS%
 echo Output:       %OUTPUT%
 echo.
 
 if "%OUTPUT%"=="" (
-    ..\.venv\Scripts\python main.py "%TAG%" "%START%" "%END%" --method %METHOD% --interval %INTERVAL% --summary-type %SUMMARY_TYPE%
+    ..\.venv\Scripts\python main.py "%TAG%" "%START%" "%END%" --method %METHOD% --interval %INTERVAL% --summary-type %SUMMARY_TYPE% --units %UNITS%
 ) else (
-    ..\.venv\Scripts\python main.py "%TAG%" "%START%" "%END%" --method %METHOD% --interval %INTERVAL% --summary-type %SUMMARY_TYPE% --output "%OUTPUT%"
+    ..\.venv\Scripts\python main.py "%TAG%" "%START%" "%END%" --method %METHOD% --interval %INTERVAL% --summary-type %SUMMARY_TYPE% --units %UNITS% --output "%OUTPUT%"
 )
 
 echo.

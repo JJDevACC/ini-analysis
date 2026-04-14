@@ -160,6 +160,7 @@ def _make_pipeline_args(**overrides):
         "method": "summary",
         "interval": None,
         "summary_type": "Average",
+        "units": "gpm-to-mgd",
         "output": None,
         "post_to_sliicer": False,
         "log_level": "INFO",
@@ -209,6 +210,7 @@ class TestPipelineSummary:
     """Test run_pipeline with method='summary' using mocked pi_client/csv_formatter."""
 
     @patch("main.csv_formatter.write_sliicer_csv", return_value=3)
+    @patch("main.csv_formatter.convert_values", return_value=_SAMPLE_SUMMARY_DATA)
     @patch("main.csv_formatter.derive_site_id", return_value="WES8617")
     @patch("main.pi_client.get_summary_data", return_value=_SAMPLE_SUMMARY_DATA)
     @patch("main.pi_client.find_point_webid", return_value="POINT_WEBID")
@@ -217,7 +219,7 @@ class TestPipelineSummary:
     @patch("main.os.getenv", side_effect=_env_side_effect)
     def test_summary_calls_get_summary_data(
         self, mock_getenv, mock_session, mock_find_server,
-        mock_find_point, mock_get_summary, mock_derive, mock_write,
+        mock_find_point, mock_get_summary, mock_derive, mock_convert, mock_write,
     ):
         """Summary method calls get_summary_data and write_sliicer_csv."""
         args = _make_pipeline_args(method="summary")
@@ -231,6 +233,7 @@ class TestPipelineSummary:
         mock_write.assert_called_once_with("WES8617.csv", "WES8617", _SAMPLE_SUMMARY_DATA)
 
     @patch("main.csv_formatter.write_sliicer_csv", return_value=3)
+    @patch("main.csv_formatter.convert_values", return_value=_SAMPLE_SUMMARY_DATA)
     @patch("main.csv_formatter.derive_site_id", return_value="WES8617")
     @patch("main.pi_client.get_summary_data", return_value=_SAMPLE_SUMMARY_DATA)
     @patch("main.pi_client.find_point_webid", return_value="POINT_WEBID")
@@ -239,7 +242,7 @@ class TestPipelineSummary:
     @patch("main.os.getenv", side_effect=_env_side_effect)
     def test_summary_uses_custom_output_path(
         self, mock_getenv, mock_session, mock_find_server,
-        mock_find_point, mock_get_summary, mock_derive, mock_write,
+        mock_find_point, mock_get_summary, mock_derive, mock_convert, mock_write,
     ):
         """When --output is specified, write_sliicer_csv uses that path."""
         args = _make_pipeline_args(method="summary", output="custom_out.csv")
@@ -248,6 +251,7 @@ class TestPipelineSummary:
         mock_write.assert_called_once_with("custom_out.csv", "WES8617", _SAMPLE_SUMMARY_DATA)
 
     @patch("main.csv_formatter.write_sliicer_csv", return_value=3)
+    @patch("main.csv_formatter.convert_values", return_value=_SAMPLE_SUMMARY_DATA)
     @patch("main.csv_formatter.derive_site_id", return_value="WES8617")
     @patch("main.pi_client.get_summary_data", return_value=_SAMPLE_SUMMARY_DATA)
     @patch("main.pi_client.find_point_webid", return_value="POINT_WEBID")
@@ -256,7 +260,7 @@ class TestPipelineSummary:
     @patch("main.os.getenv", side_effect=_env_side_effect)
     def test_summary_passes_summary_type_and_duration(
         self, mock_getenv, mock_session, mock_find_server,
-        mock_find_point, mock_get_summary, mock_derive, mock_write,
+        mock_find_point, mock_get_summary, mock_derive, mock_convert, mock_write,
     ):
         """Summary method passes summary_type and interval as summary_duration."""
         args = _make_pipeline_args(method="summary", summary_type="Maximum", interval="2h")
@@ -275,6 +279,7 @@ class TestPipelineInterpolated:
     """Test run_pipeline with method='interpolated' using mocked pi_client/csv_formatter."""
 
     @patch("main.csv_formatter.write_sliicer_csv", return_value=2)
+    @patch("main.csv_formatter.convert_values", return_value=_SAMPLE_HOURLY_AVG)
     @patch("main.csv_formatter.derive_site_id", return_value="WES8617")
     @patch("main.csv_formatter.compute_hourly_averages", return_value=_SAMPLE_HOURLY_AVG)
     @patch("main.pi_client.get_interpolated_data", return_value=_SAMPLE_INTERPOLATED_RAW)
@@ -284,7 +289,7 @@ class TestPipelineInterpolated:
     @patch("main.os.getenv", side_effect=_env_side_effect)
     def test_interpolated_calls_compute_hourly_averages(
         self, mock_getenv, mock_session, mock_find_server,
-        mock_find_point, mock_get_interp, mock_hourly, mock_derive, mock_write,
+        mock_find_point, mock_get_interp, mock_hourly, mock_derive, mock_convert, mock_write,
     ):
         """Interpolated method calls get_interpolated_data, compute_hourly_averages, then write."""
         args = _make_pipeline_args(method="interpolated")
@@ -295,6 +300,7 @@ class TestPipelineInterpolated:
         mock_write.assert_called_once_with("WES8617.csv", "WES8617", _SAMPLE_HOURLY_AVG)
 
     @patch("main.csv_formatter.write_sliicer_csv", return_value=2)
+    @patch("main.csv_formatter.convert_values", return_value=_SAMPLE_HOURLY_AVG)
     @patch("main.csv_formatter.derive_site_id", return_value="WES8617")
     @patch("main.csv_formatter.compute_hourly_averages", return_value=_SAMPLE_HOURLY_AVG)
     @patch("main.pi_client.get_interpolated_data", return_value=_SAMPLE_INTERPOLATED_RAW)
@@ -304,7 +310,7 @@ class TestPipelineInterpolated:
     @patch("main.os.getenv", side_effect=_env_side_effect)
     def test_interpolated_uses_custom_interval(
         self, mock_getenv, mock_session, mock_find_server,
-        mock_find_point, mock_get_interp, mock_hourly, mock_derive, mock_write,
+        mock_find_point, mock_get_interp, mock_hourly, mock_derive, mock_convert, mock_write,
     ):
         """Interpolated method passes custom --interval to get_interpolated_data."""
         args = _make_pipeline_args(method="interpolated", interval="5m")

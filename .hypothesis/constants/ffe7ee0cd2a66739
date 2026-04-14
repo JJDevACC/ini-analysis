@@ -1,0 +1,4 @@
+# file: C:\repository\local\ini-analysis\data-to-sliicer\main.py
+# hypothesis_version: 6.151.12
+
+['--interval', '--log-level', '--method', '--output', '--post-to-sliicer', '--summary-type', '--units', '.env', '0', '1h', '1m', 'Average', 'INFO', 'Method: %s', 'PIWEBAPI_PASS', 'PIWEBAPI_SERVER', 'PIWEBAPI_URL', 'PIWEBAPI_USER', 'PIWEBAPI_VERIFY_TLS', 'Pipeline failed: %s', 'Site ID: %s', 'Tag: %s', 'Time range: %s to %s', '__main__', 'end', 'false', 'gpm-to-mgd', 'interpolated', 'masterpi', 'no', 'start', 'store_true', 'summary', 'tag', 'true']
