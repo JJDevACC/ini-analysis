@@ -124,17 +124,29 @@ def test_write_sliicer_csv_value_error_row():
 # --- compute_hourly_averages ---
 
 def test_compute_hourly_averages_simple():
-    """3 values in the same hour should produce a single entry with their mean."""
+    """3 values in the same hour (all < 30 min) should produce a single entry with their mean."""
     data = [
         (datetime(2024, 6, 12, 0, 0, 0), 3.0),
-        (datetime(2024, 6, 12, 0, 20, 0), 6.0),
-        (datetime(2024, 6, 12, 0, 40, 0), 9.0),
+        (datetime(2024, 6, 12, 0, 10, 0), 6.0),
+        (datetime(2024, 6, 12, 0, 20, 0), 9.0),
     ]
     result = csv_formatter.compute_hourly_averages(data)
     assert len(result) == 1
     ts, avg = result[0]
     assert ts == datetime(2024, 6, 12, 0, 0, 0)
     assert avg == pytest.approx(6.0)
+
+
+def test_compute_hourly_averages_rounding():
+    """Values at minute >= 30 round up to the next hour (matching R's round_date)."""
+    data = [
+        (datetime(2024, 6, 12, 0, 29, 0), 10.0),  # rounds to 0:00
+        (datetime(2024, 6, 12, 0, 30, 0), 20.0),  # rounds to 1:00
+    ]
+    result = csv_formatter.compute_hourly_averages(data)
+    assert len(result) == 2
+    assert result[0] == (datetime(2024, 6, 12, 0, 0, 0), 10.0)
+    assert result[1] == (datetime(2024, 6, 12, 1, 0, 0), 20.0)
 
 
 def test_compute_hourly_averages_empty():

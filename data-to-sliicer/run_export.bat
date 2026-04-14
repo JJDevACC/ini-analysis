@@ -20,8 +20,8 @@ REM ============================================================
 set TAG=wwl:south:wes8617b_realtmmetflo
 set START=2024-06-12
 set END=2024-09-10
-set METHOD=summary
-set INTERVAL=1h
+set METHOD=interpolated
+set INTERVAL=1m
 set SUMMARY_TYPE=Average
 set UNITS=gpm-to-mgd
 set OUTPUT=

@@ -7,7 +7,7 @@ hourly averages from 1-minute data, and deriving site IDs from PI tag names.
 import re
 import logging
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional
 
 logger = logging.getLogger(__name__)
@@ -77,10 +77,23 @@ def derive_site_id(tag_name: str) -> str:
     return before_underscore.upper()
 
 
+def _round_to_hour(ts: datetime) -> datetime:
+    """Round a timestamp to the nearest hour, matching R's round_date("1h").
+
+    Minutes 0-29 round down, minutes 30-59 round up.
+    """
+    if ts.minute >= 30:
+        return ts.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
+    return ts.replace(minute=0, second=0, microsecond=0)
+
+
 def compute_hourly_averages(
     data: list[tuple[datetime, float]],
 ) -> list[tuple[datetime, Optional[float]]]:
     """Group 1-minute data by clock hour and compute the arithmetic mean.
+
+    Uses rounding to the nearest hour (matching R's ``round_date("1h")``):
+    minutes 0-29 round down, minutes 30-59 round up.
 
     Args:
         data: List of (timestamp, value) pairs at sub-hourly intervals.
@@ -94,7 +107,7 @@ def compute_hourly_averages(
 
     groups: dict[datetime, list[float]] = defaultdict(list)
     for ts, val in data:
-        hour_key = ts.replace(minute=0, second=0, microsecond=0)
+        hour_key = _round_to_hour(ts)
         groups[hour_key].append(val)
 
     results: list[tuple[datetime, Optional[float]]] = []
