@@ -6,3 +6,6 @@
 
 # RStudio user-specific cache files
 .Rproj.user/
+
+# Hypothesis test database (machine-specific, changes every run)
+.hypothesis/

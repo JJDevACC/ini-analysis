@@ -42,6 +42,10 @@ C:\repository\references\pi-web-api\pi_web_api_reference_4-9-2026.md
 ### Project Working Folder
 All code and items for this section of the project shall be placed or used in the following folder, C:\repository\local\ini-analysis\data-to-sliicer.
 
+### Sample PI Points to be used to Validate Example CSV files
+wwl:east:bra10477b_realtmmetflo
+wwl:south:wes8617b_realtmmetflo
+
 ## [I&I] AF Database Upload Automation
 
 ### Folders for R Libraries Used In Conjunction with R Code for Making the CSV PI Builder Upload File

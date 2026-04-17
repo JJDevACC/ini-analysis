@@ -154,9 +154,8 @@ def format_value(value: Optional[float]) -> str:
     if value is None:
         return "#VALUE!"
 
-    # Format with enough precision, then strip trailing zeros
-    # Use repr-style formatting to preserve full precision
-    formatted = f"{value:.15g}"
+    # Format with 10 significant digits to match Craig's R output precision
+    formatted = f"{value:.10g}"
     return formatted
 
 

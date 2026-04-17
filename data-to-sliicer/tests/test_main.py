@@ -162,6 +162,7 @@ def _make_pipeline_args(**overrides):
         "summary_type": "Average",
         "units": "gpm-to-mgd",
         "output": None,
+        "output_suffix": "",
         "post_to_sliicer": False,
         "log_level": "INFO",
     }

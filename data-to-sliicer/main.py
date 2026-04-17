@@ -65,7 +65,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--output",
         default=None,
-        help="Output CSV file path (default: {site_id}.csv)",
+        help="Output CSV file path (default: {site_id}.csv or {site_id}{suffix}.csv if --output-suffix is set)",
+    )
+    parser.add_argument(
+        "--output-suffix",
+        default="",
+        help="Suffix to append to the auto-generated filename (e.g. _interpolated, _pi-summary)",
     )
     parser.add_argument(
         "--post-to-sliicer",
@@ -141,7 +146,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
 
     # Step 6: Derive site ID and determine output path
     site_id = csv_formatter.derive_site_id(args.tag)
-    output_path = args.output or f"{site_id}.csv"
+    output_path = args.output or f"{site_id}{args.output_suffix}.csv"
     logger.info("Site ID: %s", site_id)
 
     # Step 6: Write Sliicer CSV
